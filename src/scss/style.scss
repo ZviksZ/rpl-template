@@ -1,0 +1,53 @@
+// переменные
+@import 'variables';
+
+// Шрифты
+@import 'fonts';
+
+// медиа-запросы
+@import 'mediaqueries';
+
+// иконочный шрифт
+@import 'icons';
+
+// обнуления отступов, margin и т.п.
+@import 'helper';
+
+// сетка
+@import 'grid';
+
+// базовые стили шаблона
+@import 'base';
+
+// типографика контента
+@import 'typographic';
+
+//header
+@import 'header';
+
+//footer
+@import 'footer';
+
+//кнопки.
+@import 'buttons';
+
+
+//новости
+@import 'news';
+
+
+
+
+
+
+//Slick слайдер(стили).
+/*@import '../../node_modules/slick-carousel/slick/slick.css';
+@import '../../node_modules/slick-carousel/slick/slick-theme.css';*/
+
+
+
+
+/*@import '../../node_modules/choices.js/public/assets/styles/choices.min.css';*/
+
+
+

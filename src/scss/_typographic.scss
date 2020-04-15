@@ -1,0 +1,160 @@
+// Типографика
+.section {
+    margin: 0;
+    padding: 50px 0 80px;
+    background-color: $colorWhite;
+    @include mobile {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    @include desktop-small{
+        padding-bottom: 60px;
+    }
+    @include tablet-mobile{
+        padding-bottom: 40px;
+    }
+    &.gray {
+        background: $sectionGreyBg;
+    }
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.h1 {
+    font-weight: bold;
+    font-size: 68px;
+    line-height: 72px;
+    color: $colorBlue;
+    @include desktop-small{
+
+    }
+    @include tablet {
+
+    }
+    @include mobile{
+
+    }
+}
+.h2 {
+    font-weight: bold;
+    font-size: 52px;
+    line-height: 55px;
+    color: $colorBlue;
+    @include desktop-small{
+
+    }
+    @include tablet {
+
+    }
+    @include mobile{
+
+    }
+}
+.h3 {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 44px;
+    color: $colorBlue;
+    @include desktop-small{
+
+    }
+    @include tablet {
+
+    }
+    @include mobile{
+
+    }
+}
+.h4 {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 32px;
+    color: $colorBlue;
+    @include desktop-small{
+
+    }
+    @include tablet {
+
+    }
+    @include mobile{
+
+    }
+}
+.h5 {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 23px;
+    color: $colorBlue;
+    @include desktop-small{
+
+    }
+    @include tablet {
+
+    }
+    @include mobile{
+
+    }
+}
+.h6 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 19px;
+    color: $colorBlue;
+    @include desktop-small{
+
+    }
+    @include tablet {
+
+    }
+    @include mobile{
+
+    }
+}
+.subtitle {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    color: $colorBlue;
+    @include desktop-small{
+
+    }
+    @include tablet {
+
+    }
+    @include mobile{
+
+    }
+}
+p {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    @include mobile{
+        font-size: 14px;
+    }
+}
+a {
+    display: inline-block;
+    color: $colorBlue;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    text-decoration: none;
+    @include desktop {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+b, strong {
+    color: #000000;
+    font-weight: 700;
+}
+.white {
+    color: $colorWhite;
+}
+.blue {
+    color: $colorBlue;
+}

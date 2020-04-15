@@ -1,0 +1,15 @@
+.button {
+  display: inline-block;
+  background: $colorMain;
+  font-size: 24px;
+  color: #FFFFFF;
+  padding: 18px 28px;
+  border: 0;
+  text-decoration: none;
+  transition: .2s linear;
+  @include desktop {
+    &:hover {
+      background: darken($colorMain, 10%) ;
+    }
+  }
+}
