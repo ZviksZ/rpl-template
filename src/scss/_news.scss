@@ -47,7 +47,7 @@
             }
         }
         .news__date {
-            display: inline-block;
+            display: block;
             font-size: 12px;
             line-height: 13px;
             color: #9A9A9A;
@@ -65,9 +65,51 @@
                 }
             }
         }
-        @include mobile{
+
+        @media screen and (max-width: 759px){
+            display: flex;
             .news__title {
                 font-size: 14px;
+            }
+            .news__img {
+                display: block;
+                width: 100px;
+                min-width: 100px;
+                height: 100px;
+                &:before{
+                    padding-top: 100%;
+                }
+            }
+            .news-text {
+                margin-left: 15px;
+                .subtitle {
+                    max-width: 400px;
+                }
+                .news__date {
+                    margin-top: 0;
+                    font-size: 12px;
+                    line-height: 13px;
+                }
+            }
+        }
+        @media screen and (max-width: 759px) and (min-width: 500px){
+            .news__img {
+                width: 200px;
+                min-width: 200px;
+                height: 200px;
+            }
+            .news-text {
+                .news__date {
+                    font-size: 14px;
+                }
+                .subtitle {
+                    font-size: 17px;
+                }
+            }
+        }
+        @include tablet {
+            .news__title {
+                font-size: 16px;
             }
         }
     }
@@ -81,7 +123,6 @@
         background-repeat: no-repeat;
         background-position: center center;
         overflow: hidden;
-        padding: 35px;
         margin-bottom: 35px;
         &:before{
             content: " ";
@@ -101,16 +142,26 @@
             font-size: 14px;
             line-height: 15px;
         }
+
         @include mobile {
+            .news-tab__content {
+                padding: 20px;
+            }
             &:before{
-                content: " ";
-                display: block;
-                float: left;
-                margin: 0;
                 padding-top: 124%;
             }
             .news__date__main {
                 font-size: 12px;
+            }
+        }
+        @media screen and (min-width:540px) and (max-width:760px) {
+            &:before{
+                padding-top: 80%;
+            }
+        }
+        @include tablet {
+            &:before{
+                padding-top: 60%;
             }
         }
     }

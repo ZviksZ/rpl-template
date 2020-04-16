@@ -1,4 +1,14 @@
 .results {
+    .d-flex-results {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 52px;
+        .h2 {
+            margin-right: 50px;
+        }
+    }
     .results__table {
         width: 100%;
         background: #FFFFFF;
@@ -44,23 +54,48 @@
                 }
             }
         }
-    }
+        @include mobile {
+            .result-item {
+                .score {
+                    font-size: 22px;
+                    &.time {
+                        font-size: 14px;
+                    }
+                }
+                .team__name {
+                    font-size: 12px;
+                }
+                .team__logo {
+                    width: 25px;
+                }
+            }
 
 
-    .switches {
-        margin-bottom: 52px;
+        }
+        @include tablet {
+            .result-item {
+                .score {
+                    font-size: 25px;
+                    &.time {
+                        font-size: 15px;
+                    }
+                }
+                .team__name {
+                    font-size: 14px;
+                }
+            }
+        }
     }
     .results__title {
         font-weight: bold;
         font-size: 22px;
         line-height: 23px;
         color: $colorMain;
-        margin-bottom: 18px;
         &.mb5 {
             margin-bottom: 5px;
         }
     }
-    .results__date {
+    .results__subtitle {
         display: inline-block;
         font-size: 15px;
         line-height: 16px;
@@ -105,7 +140,6 @@
         }
         td {
             font-size: 30px;
-            line-height: 32px;
             color: #021135;
             font-weight: 700;
             margin-bottom: 1px;
@@ -126,5 +160,73 @@
                 height: 80px;
             }
         }
+        @include mobile {
+            th, td {
+                &:first-child {
+                    padding-left: 10px;
+                }
+                &:last-child {
+                    padding-right: 10px;
+                }
+            }
+
+            th {
+                font-size: 14px;
+            }
+            td {
+                font-size: 16px;
+                &:nth-child(2) {
+                    padding-right: 5px;
+                }
+                &:nth-child(3) {
+                    width: 40px;
+                }
+                &:nth-child(4) {
+                    width: 40px;
+                }
+                &:first-child {
+                    width: 40px;
+                }
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+        @include tablet {
+            th {
+                font-size: 16px;
+            }
+            td {
+                font-size: 18px;
+                &:first-child {
+                    width: 70px;
+                }
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+    @include mobile {
+        .col {
+            margin-bottom: 35px;
+        }
+        .switches {
+            text-align: left !important;
+            display: flex;
+            overflow-x: scroll;
+            margin-top: 20px;
+            .tab-big {
+                margin-right: 5px;
+                min-width: 100px;
+                max-height: 43px;
+                white-space: nowrap;
+            }
+        }
+    }
+    @include tablet {
+
     }
 }

@@ -46,10 +46,12 @@
 
     }
     @include tablet {
-
+        font-size: 40px;
+        line-height: 42px;
     }
     @include mobile{
-
+        font-size: 30px;
+        line-height: 32px;
     }
 }
 .h3 {
@@ -60,12 +62,13 @@
     @include desktop-small{
 
     }
-    @include tablet {
-
-    }
     @include mobile{
         font-size: 22px;
         line-height: 23px;
+    }
+    @include tablet {
+        font-size: 26px;
+        line-height: 27px;
     }
 }
 .h4 {

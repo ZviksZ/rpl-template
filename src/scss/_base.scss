@@ -60,6 +60,9 @@ body {
     &.container-nopadding {
         padding: 1px 0;
     }
+    @include only-mobile {
+        padding: 1px 10px;
+    }
 }
 
 .tab-big {
@@ -82,6 +85,10 @@ body {
             color: #FFFFFF;
             border: 2px solid $colorRed;
         }
+    }
+    @include mobile {
+        font-size: 18px;
+        padding: 10px;
     }
 }
 .tab-small {

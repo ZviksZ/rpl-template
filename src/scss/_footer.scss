@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
   }
   &__text {
     font-size: 16px;
@@ -16,6 +17,55 @@
   &__links {
     a {
       margin-right: 15px;
+    }
+  }
+  @include only-mobile {
+    height: auto;
+    padding: 10px 0;
+    &__wrap {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__text {
+      text-align: center;
+    }
+    &__links {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 15px 0 5px;
+      a {
+        margin-right: 0;
+      }
+    }
+  }
+  @include tablet {
+    height: auto;
+    padding: 15px 0;
+    &__wrap {
+      justify-content: center;
+    }
+    &__text {
+      text-align: center;
+    }
+    &__links {
+      justify-content: space-around;
+      padding: 0 100px;
+      a {
+        margin-right: 15px;
+      }
+    }
+  }
+  @media screen and (min-width: 450px) and (max-width: 760px){
+    &__links {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      padding: 0 50px;
+      margin: 15px 0 5px;
+      a {
+        margin-right: 0;
+      }
     }
   }
 }
