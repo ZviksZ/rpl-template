@@ -1,13 +1,5 @@
 import * as $  from 'jquery';
 
-import {
-    initPlaceholders,
-    initMaskedInput,
-    validateForm,
-    validateField,
-    getMoneyInputValue,
-    getMaskedInputValue
-} from './components/form';
 
 import {initTabs} from './components/tabs'
 
@@ -19,17 +11,43 @@ $(function () {
       })
    }
 
-   toggleMainMenu()
+   toggleMainMenu();
+   initAdditionalTabs('tab-add', 'tab-2');
+   initAdditionalTabs('tab-add-2', 'tab-3');
 });
 
 
-function toggleMainMenu() {
 
+/* Открытие / закрытие меню в мобильной версии */
+function toggleMainMenu() {
    $(".header__burger" ).on('click touchstart', function(e) {
-      // prevent default anchor click
       e.preventDefault();
       $("body").toggleClass("menu-open");
-      $("#hamburger-icon").toggleClass("hamburger-open");
    });
 }
 
+/* Инициализация дополнительных табов(внутри табов) */
+function initAdditionalTabs(tabsClassKey, sectionClass) {
+   const tabs = document.getElementsByClassName(tabsClassKey);
+   const sectionClassName = '.' + sectionClass;
+
+   [...tabs].forEach(tab => tab.addEventListener('click', tabClick));
+
+   function tabClick(event) {
+      const tabId = event.target.dataset.id;
+
+      $(sectionClassName).removeClass('active');
+
+      [...tabs].forEach((tab, i) => {
+         tab.classList.remove('active');
+
+      })
+
+      tabs[tabId - 1].classList.add('active');
+      const section = document.querySelectorAll(`.${sectionClass}[data-id='${tabId}']`)
+
+      section.forEach((tab, i) => {
+         tab.classList.add('active');
+      })
+   }
+}

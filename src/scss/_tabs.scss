@@ -10,3 +10,24 @@
 .tabs-block .tab-btn.active {
     display: table-row;
 }
+
+
+
+.tab-2 {
+    display: none;
+}
+.tab-2.active {
+    display: table-row;
+}
+.tab-3 {
+    display: none;
+}
+.tab-3.active {
+    display: table-row;
+}
+
+.additional-tabs {
+    .tab-small {
+        margin-right: 24px;
+    }
+}

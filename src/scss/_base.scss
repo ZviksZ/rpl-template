@@ -35,6 +35,9 @@ body {
     overflow: hidden;
     position: relative;
     z-index: 99;
+    &.bg-gray {
+        background: $sectionGreyBg;
+    }
 }
 
 
@@ -135,4 +138,19 @@ body {
     }
 }
 
+.big-banner {
+    width: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    &:before{
+        content: " ";
+        display: block;
+        float: left;
+        margin: 0;
+        padding-top: 44%;
+    }
+}
 

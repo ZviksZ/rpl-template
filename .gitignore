@@ -63,3 +63,4 @@ PSD
 package-lock.json
 
 .idea
+/dist

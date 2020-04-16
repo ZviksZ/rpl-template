@@ -1,0 +1,26 @@
+.news-detail {
+    width: 100%;
+    background: $colorWhite;
+    padding: 50px 145px;
+    a {
+        text-decoration: underline;
+        color: $colorMain;
+        font-size: 17px;
+    }
+    .news__date {
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 18px;
+        color: #9A9A9A;
+    }
+    p {
+        line-height: 34px;
+    }
+    .news-image {
+        width: 100%;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

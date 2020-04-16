@@ -18,6 +18,7 @@ function initTabs($tabs) {
       return false;
    });
 
+
    function changeTab(tab) {
       $tabs.find('[data-tab]').removeClass('active');
       $tabs.find('[data-tab="' + tab + '"]').addClass('active');
