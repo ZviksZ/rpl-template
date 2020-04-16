@@ -12,4 +12,8 @@
       background: darken($colorMain, 10%) ;
     }
   }
+  @include mobile{
+    font-size: 18px;
+    padding: 12px 18px;
+  }
 }

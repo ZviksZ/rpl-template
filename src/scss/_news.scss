@@ -1,21 +1,10 @@
 .news-block {
-    .news-block__rows {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        &.news-block__rows-wide {
-            justify-content: space-between;
-            .news-tab {
-                width: 23%;
-                margin: 0;
-            }
-        }
-    }
     .news-tab {
         position: relative;
+        width: 100%;
         cursor: pointer;
-        width: 46%;
         margin: 0 0 35px;
+        overflow: hidden;
         .news__type {
             display: block;
             position: absolute;
@@ -27,6 +16,7 @@
             font-size: 10px;
             line-height: 11px;
             letter-spacing: 0.06em;
+            z-index: 4;
             &.red {
                 background: $colorRed;
             }
@@ -47,6 +37,7 @@
             background-repeat: no-repeat;
             background-position: center center;
             overflow: hidden;
+            transition: .2s linear;
             &:before{
                 content: " ";
                 display: block;
@@ -72,6 +63,11 @@
                 .news__title {
                     color: $colorMain;
                 }
+            }
+        }
+        @include mobile{
+            .news__title {
+                font-size: 14px;
             }
         }
     }
@@ -104,6 +100,18 @@
         .news__date__main {
             font-size: 14px;
             line-height: 15px;
+        }
+        @include mobile {
+            &:before{
+                content: " ";
+                display: block;
+                float: left;
+                margin: 0;
+                padding-top: 124%;
+            }
+            .news__date__main {
+                font-size: 12px;
+            }
         }
     }
 

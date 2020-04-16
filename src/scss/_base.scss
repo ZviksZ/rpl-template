@@ -25,6 +25,7 @@ body {
     transition: .2s linear;
     padding: 0;
     margin: 0;
+    color: $colorBlue;
 }
 
 .body {
@@ -69,6 +70,7 @@ body {
     line-height: 19px;
     color: $colorBlue;
     border: 2px solid #E6E6E6;
+    cursor: pointer;
     &.active {
         background: $colorRed;
         color: #FFFFFF;
@@ -89,6 +91,7 @@ body {
     color: $colorBlue;
     padding-bottom: 8px;
     border-bottom: 2px solid transparent;
+    cursor: pointer;
     &.active {
         border-bottom: 2px solid $colorBlue;
     }
@@ -103,14 +106,24 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 18px;
+    height: 18px;
     background: $colorRed;
     border-radius: 50%;
     transition: .2s linear;
+    img {
+        width: 6px !important;
+    }
     @include desktop {
         &:hover {
             background: darken($colorRed, 10%);
+        }
+    }
+    &.play-btn__big {
+        width: 46px;
+        height: 46px;
+        img {
+            width: 14px !important;
         }
     }
 }
