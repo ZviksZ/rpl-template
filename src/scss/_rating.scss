@@ -5,6 +5,9 @@
         line-height: 42px;
         color: $colorBlue;
         margin-bottom: 52px;
+        @include desktop-small {
+            font-size: 35px;
+        }
         @include mobile {
             font-size: 30px;
             line-height: 32px;
@@ -20,8 +23,16 @@
             border-left: 7px solid $colorWhite;
             border-bottom: 1px solid #F1F1F1;
             height: 63px !important;
+            @include desktop {
+                &:hover {
+                    td {
+                        background: #F6F6F6;
+                    }
+                }
+            }
             td {
                 padding: 7px 0;
+                cursor: pointer;
             }
             &:first-child {
                 border-left: 7px solid $colorMain;
@@ -110,8 +121,16 @@
         tr {
             border-left: 7px solid $colorWhite;
             border-bottom: 1px solid #F1F1F1;
+            @include desktop {
+                &:hover {
+                    td {
+                        background: #F6F6F6;
+                    }
+                }
+            }
             td {
                 padding: 3px 0;
+                cursor: pointer;
             }
             &:first-child {
                 border-left: 7px solid $colorRed;

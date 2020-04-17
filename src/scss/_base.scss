@@ -67,7 +67,9 @@ body {
         padding: 1px 10px;
     }
 }
-
+.overflow-hidden {
+    overflow: hidden !important;
+}
 .tab-big {
     display: inline-block;
     padding: 14px 18px;
@@ -178,4 +180,20 @@ body {
             }
         }
     }
+}
+
+
+.fancybox-button {
+    background: #fff;
+    color: black;
+    padding: 0;
+}
+.fancybox-infobar span {
+    color: #fff !important;
+}
+body.compensate-for-scrollbar {
+    overflow: auto !important;
+}
+.compensate-for-scrollbar {
+    margin-right: 0 !important;
 }

@@ -42,17 +42,18 @@
 @import 'tabs';
 @import 'rating';
 @import 'club-colors';
+@import 'news-gallery';
 
 
 
 
 
 //Slick слайдер(стили).
-/*@import '../../node_modules/slick-carousel/slick/slick.css';
-@import '../../node_modules/slick-carousel/slick/slick-theme.css';*/
+@import '../../node_modules/slick-carousel/slick/slick.css';
+@import '../../node_modules/slick-carousel/slick/slick-theme.css';
 
-
-
+/*@import '../../node_modules/lightbox2/src/css/lightbox.css';*/
+@import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css';
 
 /*@import '../../node_modules/choices.js/public/assets/styles/choices.min.css';*/
 

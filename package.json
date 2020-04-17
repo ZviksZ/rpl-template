@@ -10,9 +10,12 @@
     "build": "webpack --mode production && prettier --print-width=120 --parser html --write dist/*.html"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "choices.js": "^9.0.1",
     "inputmask": "^5.0.3",
     "jquery": "^3.4.1",
+    "jquery-plugin-viewport-checker": "^1.8.3",
+    "lightbox2": "^2.11.1",
     "moment": "^2.24.0",
     "slick-carousel": "^1.8.1"
   },

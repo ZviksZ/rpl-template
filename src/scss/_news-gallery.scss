@@ -1,0 +1,105 @@
+.gallery {
+    .slick-prev {
+        z-index: 55;
+        border-width: 0 8px 8px 0 !important;
+        display: inline-block;
+        padding: 8px;
+        border-color: $colorWhite !important;
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        left: 25px;
+        top: 42%;
+        border-style: solid !important;
+        &:before {
+            display: none;
+        }
+    }
+    .slick-next {
+        z-index: 55;
+        border-width: 0 8px 8px 0 !important;
+        display: inline-block;
+        padding: 8px;
+        border-color: $colorWhite !important;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        right: 25px;
+        top: 42%;
+        border-style: solid !important;
+        &:before {
+            display: none;
+        }
+
+    }
+    .gallery__item {
+        cursor: pointer;
+        position: relative;
+        display: block;
+    }
+    .gallery__item.hidden {
+        display: none;
+    }
+    .item {
+        display: block;
+        position: relative;
+        margin-bottom: 24px;
+        overflow: hidden;
+        cursor: pointer;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        &:before {
+            content: '';
+            display: block;
+            margin: 0;
+            float: left;
+            padding-top: 67%;
+        }
+        .yellow-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(0deg, rgba(219, 190, 63, 0.7), rgba(219, 190, 63, 0.7));
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            transition: 0.5s linear;
+            object-fit: cover;
+        }
+    }
+    .more-item {
+        background: url(../img/others/gallery/more-item-bg.png) no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        span {
+            font-family: $fontBase;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 53px;
+            text-align: center;
+            letter-spacing: 0.03em;
+            color: $colorMain;
+            z-index: 1;
+            @include mobile {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+
+
+

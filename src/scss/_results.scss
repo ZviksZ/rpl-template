@@ -19,9 +19,18 @@
             background: #ffffff;
             padding: 8px 0;
             border-bottom: 1px solid #F1F1F1;
+            transition: .2s linear;
+            @include desktop {
+                &:hover {
+                    td {
+                        background: #F6F6F6;
+                    }
+                }
+            }
             td {
                 padding: 11px 0;
                 position: relative;
+                cursor: pointer;
             }
             .team__logo {
                 width: 30px;
@@ -118,7 +127,13 @@
         border-collapse: collapse;
         tr {
             border-bottom: 3px solid #F1F1F1;
-
+            @include desktop {
+                &:hover {
+                    td {
+                        background: #F6F6F6;
+                    }
+                }
+            }
         }
         /*.tab.active:nth-child(4) {
             height: 95.5px;
@@ -154,6 +169,8 @@
             color: #021135;
             font-weight: 700;
             margin-bottom: 1px;
+            cursor: pointer;
+
             &:first-child {
                 width: 80px;
             }

@@ -1,6 +1,10 @@
 .news-block {
     .col {
         overflow: hidden;
+        transition: 0.4s linear;
+    }
+    .news-hide {
+        display: none;
     }
     .news-tab {
         position: relative;
@@ -21,17 +25,20 @@
             line-height: 11px;
             letter-spacing: 0.06em;
             z-index: 4;
-            &.red {
+            &.interview {
                 background: $colorRed;
             }
-            &.blue {
+            &.video {
                 background: $colorMain;
             }
-            &.purple {
+            &.new {
                 background: #8B55FF;
             }
-            &.green {
-                background: #007E32;;
+            &.media {
+                background: #007E32;
+            }
+            &.article {
+                background: #F48120;
             }
         }
         .news__img {
