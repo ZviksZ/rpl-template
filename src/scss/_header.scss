@@ -1,6 +1,6 @@
 .header-margin {
     display: none;
-    height: 46px;
+    height: 55px;
     @include mobile {
         display: block;
     }
@@ -75,7 +75,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 46px;
+        height: 55px;
         z-index: 999;
         &__logo {
             height: 30px;
@@ -86,12 +86,17 @@
         }
         &__wrap {
             width: 100%;
-            height: 46px;
+            height: 55px;
             display: flex;
             align-items: center;
             justify-content: flex-start;
             position: relative;
         }
+    }
+
+    .burger__wrap {
+        margin-left: auto;
+        padding: 15px 5px 15px 15px;
     }
 
 }

@@ -20,7 +20,7 @@
             padding: 8px 0;
             border-bottom: 1px solid #F1F1F1;
             td {
-                padding: 12px 0;
+                padding: 11px 0;
                 position: relative;
             }
             .team__logo {
@@ -118,7 +118,11 @@
         border-collapse: collapse;
         tr {
             border-bottom: 3px solid #F1F1F1;
+
         }
+        /*.tab.active:nth-child(4) {
+            height: 95.5px;
+        }*/
         tbody {
             tr:last-child {
                 border-bottom: 0;
@@ -140,7 +144,7 @@
             opacity: 0.4;
             text-align: left;
             margin-bottom: 1px;
-            padding: 26px 0;
+            padding: 28px 0;
             &.blue {
                 opacity: 1;
             }

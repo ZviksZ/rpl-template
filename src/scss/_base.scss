@@ -154,3 +154,28 @@ body {
     }
 }
 
+.breadcrumbs {
+    display: flex;
+    .item, .item-last {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 15px;
+        color: #9A9A9A;
+    }
+    .item {
+        text-decoration: none;
+        margin-right: 20px;
+        position: relative;
+        &:after {
+            content: '/';
+            display: inline-block;
+            position: absolute;
+            right: -14px;
+        }
+        @include desktop {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

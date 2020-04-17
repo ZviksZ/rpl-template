@@ -1,10 +1,14 @@
 .news-block {
+    .col {
+        overflow: hidden;
+    }
     .news-tab {
         position: relative;
         width: 100%;
         cursor: pointer;
         margin: 0 0 35px;
         overflow: hidden;
+        transition: 0.4s linear;
         .news__type {
             display: block;
             position: absolute;
@@ -37,7 +41,7 @@
             background-repeat: no-repeat;
             background-position: center center;
             overflow: hidden;
-            transition: .2s linear;
+            transition: 0.4s linear;
             &:before{
                 content: " ";
                 display: block;
@@ -57,11 +61,15 @@
             font-size: 18px;
             line-height: 23px;
             color: $colorBlue;
+            transition: 0.4s linear;
         }
         @include desktop {
             &:hover {
                 .news__title {
                     color: $colorMain;
+                }
+                .news__img {
+                    opacity: .6;
                 }
             }
         }
@@ -118,12 +126,8 @@
         flex-direction: column;
         justify-content: flex-end;
         width: 100%;
-        -webkit-background-size: cover;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        overflow: hidden;
         margin-bottom: 35px;
+        position: relative;
         &:before{
             content: " ";
             display: block;
@@ -131,24 +135,62 @@
             margin: 0;
             padding-top: 95%;
         }
+        .news-tab__main-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            overflow: hidden;
+            transition: 0.4s linear;
+        }
         .news-tab__content {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
             padding: 35px;
+            z-index: 5;
         }
         .news__date__main {
             font-size: 14px;
             line-height: 15px;
         }
-
+        p:not(.h3) {
+            line-height: 26px;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 50%;
+            transition: 0.8s linear;
+            background-image:  linear-gradient(180deg, rgba(2, 17, 53, 0) 7.69%, rgba(2, 17, 53, 0.83) 54.25%);
+        }
+        @include desktop {
+            &:hover {
+                &:after {
+                    background-image:  linear-gradient(180deg, rgba(2, 17, 53, 0) 7.69%, rgba(2, 17, 53, 0.7) 54.25%);
+                }
+                .news-tab__main-bg {
+                    opacity: 0.9;
+                    transform: scale(1.05);
+                }
+            }
+        }
         @include mobile {
             .news-tab__content {
                 padding: 20px;
             }
             &:before{
-                padding-top: 124%;
+                padding-top: 110%;
             }
             .news__date__main {
                 font-size: 12px;

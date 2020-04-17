@@ -23,4 +23,10 @@
             height: auto;
         }
     }
+    @include mobile {
+        padding: 30px 70px;
+    }
+    @media screen and (max-width: 760px){
+        padding: 15px;
+    }
 }
