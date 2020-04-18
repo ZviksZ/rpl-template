@@ -1,4 +1,12 @@
 .results {
+    .col {
+        position: relative;
+    }
+    .result-select, .choices {
+        position: absolute;
+        right: 0;
+        top: 15px;
+    }
     .d-flex-results {
         display: flex;
         justify-content: space-between;

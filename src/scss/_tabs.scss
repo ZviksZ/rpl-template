@@ -7,6 +7,9 @@
 .tabs-block .tab.active {
     display: table-row;
 }
+.tabs-block .tab.active.col {
+    display: block;
+}
 .tabs-block .tab-btn.active {
     display: table-row;
 }

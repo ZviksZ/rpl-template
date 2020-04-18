@@ -1,0 +1,64 @@
+<% var data = {
+title: "КиберЛига Pro Series"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+
+<section class="section">
+    <div class="container">
+        <select class="select result-select" data-table-sort  name="">
+            <option value="">Сортировка</option>
+            <option value="1">1</option>
+            <option value="2">1</option>
+            <option value="3">1</option>
+            <option value="4">1</option>
+            <option value="5">1</option>
+            <option value="6">1</option>
+        </select>
+
+
+        <table style="width: 100%; border-collapse: collapse; font-size: 16px;" class="table_sort">
+            <thead>
+                <tr>
+                    <th>Игрок</th>
+                    <th>Клуб</th>
+                    <th >Игр</th>
+                    <th style="display: none;">В</th>
+                    <th>Н</th>
+                    <th>П</th>
+                    <th>З-П</th>
+                    <th>За матч</th>
+                    <th>Ср. мячей</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="player">Константин Константинопольский</td>
+                    <td class="club">Крылья Советов</td>
+                    <td   class="plays">16</td>
+                    <td style="display: none;" class="win">16</td>
+                    <td class="draw">1</td>
+                    <td class="loose">14</td>
+                    <td class="goals">67-16</td>
+                    <td class="match">6</td>
+                    <td class="average">7</td>
+                    <td><button class="show-additional-stats">+</button></td>
+                </tr>
+                <tr>
+                    <td class="player">Yонстантин Константинопольский</td>
+                    <td class="club">Крылья Советов</td>
+                    <td class="plays">26</td>
+                    <td style="display: none;" class="win">26</td>
+                    <td class="draw">2</td>
+                    <td class="loose">24</td>
+                    <td class="goals">77-16</td>
+                    <td class="match">8</td>
+                    <td class="average">9</td>
+                    <td><button class="show-additional-stats">+</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<%= _.template(require('./../includes/footer.html').default)(data) %>

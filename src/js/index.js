@@ -1,7 +1,11 @@
-import * as $ from 'jquery';
+import Choices from "choices.js";
+import * as $  from 'jquery';
+
 window.jQuery = $;
 import 'slick-carousel';
+
 require("@fancyapps/fancybox");
+
 
 import {initTabs} from './components/tabs'
 
@@ -21,8 +25,10 @@ $(function () {
    gallerySliderInit();
 
    initTableRowLink();
-
-
+   customSelectInit();
+   initDataSelect();
+   initStatsTableBtn();
+   initTableSortMobile();
    $('[data-fancybox="gallery"]').fancybox({
       openSpeed: 10,
       openEffect: 'none',
@@ -36,6 +42,107 @@ $(function () {
       ],
    });
 });
+
+function initStatsTableBtn() {
+   $('.show-additional-stats').on('click', function () {
+      var row = $(this).closest('tr'),
+         plays = row.find('.plays').text(),
+         win = row.find('.win').text(),
+         draw = row.find('.draw').text(),
+         loose = row.find('.loose').text(),
+         match = row.find('.match').text(),
+         average = row.find('.average').text();
+
+      if ($(this).hasClass('open')) {
+         $(this).removeClass('open');
+         $(this).text('+');
+         row.next('tr').remove();
+      } else {
+         var newRow = ` <tr>
+               <td colspan="5">               
+                  <ul>
+                     <li>${plays}</li>
+                     <li>${win}</li>
+                     <li>${draw}</li>
+                     <li>${loose}</li>
+                     <li>${match}</li>
+                     <li>${average}</li>
+                  </ul>
+               </td>
+            </tr> `;
+
+         $(newRow).insertAfter(row);
+
+         $(this).addClass('open');
+         $(this).text('-');
+      }
+
+
+
+   })
+}
+
+
+function initTableSortMobile() {
+   $('[data-table-sort]').on('change', function (e) {
+      var thNumber = $(this).val()
+
+      var th = `.table_sort th:nth-child(${thNumber})`;
+      $(th).trigger('click')
+   })
+}
+
+/*Сортировка в таблице (добавить таблице класс table_sort*/
+document.addEventListener('DOMContentLoaded', () => {
+
+   const getSort = ({target}) => {
+      const order = (target.dataset.order = -(target.dataset.order || -1));
+      const index = [...target.parentNode.cells].indexOf(target);
+      const collator = new Intl.Collator(['en', 'ru'], {numeric: true});
+      const comparator = (index, order) => (a, b) => order * collator.compare(
+         a.children[index].innerHTML,
+         b.children[index].innerHTML
+      );
+
+      for (const tBody of target.closest('table').tBodies)
+         tBody.append(...[...tBody.rows].sort(comparator(index, order)));
+
+      for (const cell of target.parentNode.cells)
+         cell.classList.toggle('sorted', cell === target);
+   };
+
+   document.querySelectorAll('.table_sort thead').forEach(tableTH => tableTH.addEventListener('click', () => getSort(event)));
+
+});
+
+
+function initDataSelect() {
+   var select = $('.select[data-select-init]');
+   if (select.length) {
+
+      $('[data-select="1"]').addClass('active-select');
+   }
+
+   select.on('change', function () {
+      var selector = `[data-select="${$(this).val()}"]`;
+
+      $('[data-select]').removeClass('active-select');
+
+      $(selector).addClass('active-select');
+   })
+}
+
+
+function customSelectInit() {
+   if ($('select.select').length) {
+      const element = document.querySelector('select.select');
+      new Choices(element, {
+         searchEnabled: false,
+         itemSelectText: ''
+      });
+   }
+
+}
 
 function initTableRowLink() {
    var tr = $('tr[data-href]');
@@ -51,7 +158,7 @@ function initTableRowLink() {
 
 /* Открытие / закрытие меню в мобильной версии */
 function toggleMainMenu() {
-   $(".header__burger" ).on('click touchstart', function(e) {
+   $(".header__burger").on('click touchstart', function (e) {
       e.preventDefault();
       $("body").toggleClass("menu-open");
    });
@@ -72,7 +179,7 @@ function initMoreNewsBtn() {
          $(this).hide();
       }
 
-      newsHideItems.forEach(function (item,index) {
+      newsHideItems.forEach(function (item, index) {
          if ($(document).width() >= 1000) {
             if (index >= 0 && index <= 3) {
                item.classList.remove('news-hide')
@@ -123,8 +230,6 @@ function initAdditionalTabs(tabsClassKey, sectionClass) {
       })
    }
 }
-
-
 
 
 function gallerySliderInit() {
