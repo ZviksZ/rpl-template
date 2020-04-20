@@ -1,0 +1,231 @@
+.stats {
+    @include desktop {
+        .choices {
+            display: none;
+        }
+    }
+    .choices__inner {
+        position: absolute;
+        right: 0;
+        top: -18px;
+        padding: 0 !important;
+        margin: 0;
+        width: 22px;
+        height: 2px;
+        border: 0;
+        min-height: 0;
+        background: black;
+        overflow: visible;
+        z-index: 99;
+        .choices__list {
+            display: none;
+        }
+    }
+    .choices__inner:before,
+    .choices__inner:before {
+        content: '';
+        display: block;
+        background: black;
+        position: absolute;
+        top: 4px;
+        right: 0;
+        width: 66.6%;
+        height: 2px;
+        margin: 0;
+        padding: 0;
+        transform: rotate(0);
+    }
+    .choices__inner:after,
+    .choices__inner:after {
+        content: '';
+        display: block;
+        background: black;
+        position: absolute;
+        top: 8px;
+        right: 0;
+        width: 33.3%;
+        height: 2px;
+        margin: 0;
+        padding: 0;
+        transform: rotate(0);
+        border: 0;
+    }
+    .choices[data-type*=select-one].is-open:after, .choices[data-type*=select-one]:after {
+        display: none;
+    }
+    .choices__list {
+        margin-top: 5px;
+    }
+    .choices__heading {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 21px;
+        color: $colorBlue;
+    }
+    .choices .choices__list--dropdown .choices__item {
+        padding: 15px;
+    }
+    .choices .choices__list--dropdown .choices__item.is-selected:after,
+    .choices .choices__list--dropdown .choices__item:after {
+        top: 13px;
+    }
+    .choices__list--dropdown .choices__item--selectable.is-highlighted {
+        background-color: #ffffff;
+    }
+    .stats__table {
+        * {
+            color: $colorBlue;
+        }
+        tbody tr:nth-child(even) {
+            background: #F8F8F8;
+        }
+        th {
+            background: #F1F1F1;
+            padding: 7px 10px 7px 22px;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+            color: $colorBlue;
+            text-align: left;
+        }
+        td {
+            height: 60px;
+            font-size: 16px;
+            line-height: 21px;
+            color: #021135;
+            padding-left: 22px;
+            box-sizing: content-box;
+        }
+        .player {
+            max-width: 360px;
+            img {
+                width: 60px;
+                height: 60px;
+            }
+            span {
+                display: inline-block;
+                margin-left: 5px;
+                font-weight: bold;
+            }
+        }
+        .club {
+            img {
+                width: 26px;
+                height: 26px;
+            }
+            span {
+                display: inline-block;
+                margin-left: 5px;
+            }
+        }
+        .plays, .goals {
+            width: 60px;
+            font-weight: 700;
+        }
+        .btn {
+            display: none;
+            padding-right: 8px;
+        }
+        .show-additional-stats {
+            display: block;
+            width: 18px;
+            height: 18px;
+            line-height: 1;
+            font-size: 18px;
+            text-align: center;
+            color: $colorWhite;
+            background: $colorRed;
+            border: 0;
+            border-radius: 50%;
+        }
+
+        @include mobile {
+            .btn {
+                display: table-cell;
+            }
+            .win,.draw,.loose,.match,.average {
+                display: none;
+            }
+            .player {
+                min-width: 185px;
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            .club {
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+                span {
+                    display: none;
+                }
+            }
+            th {
+                font-size: 10px;
+                line-height: 20px;
+                padding: 4px;
+                padding-left: 1px;
+            }
+            td {
+                font-size: 12px;
+                line-height: 16px;
+                height: 50px;
+                padding-left: 0px;
+            }
+            .plays, .goals {
+                width: 35px;
+            }
+            .btn {
+                padding-left: 2px;
+                padding-right: 4px;
+                text-align: -webkit-right;
+            }
+            .additional-row {
+                td {
+                    background: $colorWhite;
+                }
+                .additional-list {
+                    padding: 5px 0;
+                    li {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border-bottom: 1px solid #F1F1F1;
+                        padding: 7px 4px;
+                        span {
+                            font-weight: normal;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (min-width: 760px) and (max-width: 1000px){
+            th {
+                font-size: 12px;
+                padding: 4px;
+            }
+            td {
+                font-size: 14px;
+                height: 50px;
+                padding-left: 0;
+            }
+            .btn {
+                padding-left: 10px;
+                padding-right: 4px;
+            }
+            .additional-row {
+                .additional-list {
+                    li {
+                        padding: 10px 4px;
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

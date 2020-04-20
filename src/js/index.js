@@ -44,14 +44,17 @@ $(function () {
 });
 
 function initStatsTableBtn() {
-   $('.show-additional-stats').on('click', function () {
+   $('.show-additional-stats').on('click', function (e) {
+      e.preventDefault();
+
       var row = $(this).closest('tr'),
-         plays = row.find('.plays').text(),
          win = row.find('.win').text(),
          draw = row.find('.draw').text(),
          loose = row.find('.loose').text(),
          match = row.find('.match').text(),
          average = row.find('.average').text();
+
+
 
       if ($(this).hasClass('open')) {
          $(this).removeClass('open');
@@ -60,13 +63,12 @@ function initStatsTableBtn() {
       } else {
          var newRow = ` <tr class="additional-row">
                <td colspan="5">               
-                  <ul>
-                     <li>${plays}</li>
-                     <li>${win}</li>
-                     <li>${draw}</li>
-                     <li>${loose}</li>
-                     <li>${match}</li>
-                     <li>${average}</li>
+                  <ul class="additional-list">
+                     <li><span>Побед</span><span>${win}</span></li>
+                     <li><span>Ничьих</span><span>${draw}</span></li>
+                     <li><span>Поражений</span><span>${loose}</span></li>
+                     <li><span>За матч</span><span>${match}</span></li>
+                     <li><span>Ср. мячей</span><span>${average}</span></li>
                   </ul>
                </td>
             </tr> `;
@@ -86,8 +88,8 @@ function initStatsTableBtn() {
 function initTableSortMobile() {
    if ($('[data-table-sort]').length) {
       $('[data-table-sort]').on('change', function (e) {
-         var thNumber = $(this).val()
-         var th = `.table_sort th:nth-child(${thNumber})`;
+         var thValue = $(this).val()
+         var th = `.table_sort th.${thValue}`;
 
          $('.additional-row').remove();
          $('.show-additional-stats').text('+');
@@ -224,10 +226,13 @@ function initAdditionalTabs(tabsClassKey, sectionClass) {
 
       [...tabs].forEach((tab, i) => {
          tab.classList.remove('active');
-
       })
+      const activeTabs = document.querySelectorAll(`.${tabsClassKey}[data-id='${tabId}']`)
 
-      tabs[tabId - 1].classList.add('active');
+      activeTabs.forEach((tab, i) => {
+         tab.classList.add('active');
+      })
+      //tabs[tabId - 1].classList.add('active');
       const section = document.querySelectorAll(`.${sectionClass}[data-id='${tabId}']`)
 
       section.forEach((tab, i) => {

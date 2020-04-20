@@ -1,0 +1,106 @@
+<% var data = {
+title: "КиберЛига Pro Series"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<section class="section p-b-0">
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/" class="item">Главная</a>
+            <span class="item-last">Статистика</span>
+        </div>
+    </div>
+</section>
+<section class="section stats" >
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex-results">
+                <h2 class="h2">Статистика</h2>
+
+
+                <select class="select stats-select" data-table-sort  name="">
+                    <optgroup label="Сортировка">
+                        <option value="match">За матч</option>
+                        <option value="average">Забитых-пропущенных</option>
+                        <option value="win">Побед</option>
+                        <option value="draw">Ничьих</option>
+                        <option value="loose">Поражений</option>
+                    </optgroup>
+                </select>
+
+            </div>
+            <div class="clr hide-mobile"></div>
+        </div>
+        <div class="row m-t-40">
+            <div class="col" >
+                <table style="width: 100%; border-collapse: collapse; font-size: 16px;" class="stats__table table_sort">
+                    <thead>
+                    <tr>
+                        <th class="player">Игрок</th>
+                        <th class="club">Клуб</th>
+                        <th class="plays">Игр</th>
+                        <th class="win">В</th>
+                        <th class="draw">Н</th>
+                        <th class="loose">П</th>
+                        <th class="goals">З-П</th>
+                        <th class="match">За матч</th>
+                        <th class="average">Ср. мячей</th>
+                        <th class="btn"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="player">
+                            <div class="flex-center">
+                                <img src="./img/users/1.png" alt="1">
+                                <span>Константин Константинопольский</span>
+                            </div>
+
+                        </td>
+                        <td class="club">
+                            <div class="flex-center">
+                                <img src="./img/clubs/krilya.svg" alt="1">
+                                <span>Крылья Советов</span>
+                            </div>
+
+                        </td>
+                        <td class="plays">16</td>
+                        <td class="win">16</td>
+                        <td class="draw">1</td>
+                        <td class="loose">14</td>
+                        <td class="goals">67-16</td>
+                        <td class="match">6</td>
+                        <td class="average">7</td>
+                        <td class="btn"><a href="/" class="show-additional-stats">+</a></td>
+                    </tr>
+                    <tr>
+                        <td class="player">
+                            <div class="flex-center">
+                                <img src="./img/users/2.png" alt="1">
+                                <span>Дмитрий Катыкин</span>
+                            </div>
+                        </td>
+                        <td class="club">
+                            <div class="flex-center">
+                                <img src="./img/clubs/tambov.svg" alt="1">
+                                <span>Тамбов</span>
+                            </div>
+                        </td>
+                        <td class="plays">17</td>
+                        <td class="win">17</td>
+                        <td class="draw">3</td>
+                        <td class="loose">11</td>
+                        <td class="goals">57-35</td>
+                        <td class="match">44</td>
+                        <td class="average">7</td>
+                        <td class="btn"><a href="/" class="show-additional-stats">+</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="clr hide-mobile"></div>
+        </div>
+    </div>
+</section>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>
