@@ -58,7 +58,7 @@ function initStatsTableBtn() {
          $(this).text('+');
          row.next('tr').remove();
       } else {
-         var newRow = ` <tr>
+         var newRow = ` <tr class="additional-row">
                <td colspan="5">               
                   <ul>
                      <li>${plays}</li>
@@ -84,12 +84,17 @@ function initStatsTableBtn() {
 
 
 function initTableSortMobile() {
-   $('[data-table-sort]').on('change', function (e) {
-      var thNumber = $(this).val()
+   if ($('[data-table-sort]').length) {
+      $('[data-table-sort]').on('change', function (e) {
+         var thNumber = $(this).val()
+         var th = `.table_sort th:nth-child(${thNumber})`;
 
-      var th = `.table_sort th:nth-child(${thNumber})`;
-      $(th).trigger('click')
-   })
+         $('.additional-row').remove();
+         $('.show-additional-stats').text('+');
+         $(th).trigger('click');
+      })
+   }
+
 }
 
 /*Сортировка в таблице (добавить таблице класс table_sort*/

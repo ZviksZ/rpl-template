@@ -1,0 +1,88 @@
+<% var data = {
+title: "КиберЛига Pro Series"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<section class="section gray p-b-0">
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/" class="item">Главная</a>
+            <a href="/" class="item">Новости</a>
+            <span class="item-last">Состоялась жеребьевка ЧМ-2018</span>
+        </div>
+    </div>
+</section>
+
+<section class="section gray">
+    <div class="container">
+        <div class="news-detail">
+            <div class="news__date">23.04.2020</div>
+            <h1 class="h2 m-t-20 m-b-30">Состоялась жеребьевка ЧМ-2018</h1>
+
+            <a href="./img/news/2.jpg" data-fancybox="gallery" class="news-image">
+                <img alt="news" src="./img/news/2.jpg">
+            </a>
+
+            <p class="m-b-20">Киран Триппьер на 5-й минуте вывел Англию вперёд, безупречно исполнив штрафной удар. Иван Перишич на 68-й минуте отквитал пропущенный мяч, и ничейный счёт продержался до
+                окончания
+                основного времени встречи. Хорватии удалось избежать серии пенальти в третьем подряд матче благодаря точному удару <a href="/">Марио Манджукича</a> на 113-й минуте. 2:1 - и Хорватия в
+                финале!
+                Киран Триппьер на 5-й минуте вывел Англию вперёд, безупречно исполнив штрафной удар. Иван Перишич на 68-й минуте отквитал пропущенный мяч, и ничейный счёт продержался до окончания
+                основного времени встречи.
+            </p>
+            <p class="m-b-20"> Хорватии удалось избежать серии пенальти в третьем подряд матче благодаря точному удару Марио Манджукича на 113-й минуте. 2:1 - и Хорватия в финале! Киран Триппьер
+                на 5-й минуте
+                вывел Англию вперёд, безупречно исполнив штрафной удар. Иван Перишич на 68-й минуте отквитал пропущенный мяч, и ничейный счёт продержался до окончания основного времени встречи.
+                Хорватии удалось избежать серии пенальти в третьем подряд матче благодаря точному удару Марио Манджукича на 113-й минуте. 2:1 - и <a href="/">Хорватия в финале!</a></p>
+
+
+        </div>
+    </div>
+</section>
+
+
+<section class="section p-t-0 gray">
+    <div class="container">
+        <div class="news-block">
+            <div class="h2 text-align-center m-b-30">Может быть интересно</div>
+            <div class="row">
+                <div class="col w-33 w-50-tablet">
+                    <a class="news-tab" href="/">
+                        <span class="news__type video">ВИДЕО</span>
+                        <div class="news__img" style="background-image: url('./img/news/2.jpg')"></div>
+                        <div class="news-text">
+                            <span class="news__date">23.04.2020</span>
+                            <p class="news__title subtitle">Watch classic UEFA competition games in full and for free</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col w-33 w-50-tablet">
+                    <a class="news-tab" href="/">
+                        <span class="news__type media">МЕДИА</span>
+                        <div class="news__img" style="background-image: url('./img/news/1.jpg')"></div>
+                        <div class="news-text">
+                            <span class="news__date">23.04.2020</span>
+                            <p class="news__title subtitle">Watch classic UEFA competition games in full and for free Watch classic UEFA competition games in full and for free for free</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="clr hide-desktop"></div>
+                <div class="col w-33 w-50-tablet">
+                    <a class="news-tab" href="/">
+                        <span class="news__type new">НОВОСТЬ</span>
+                        <div class="news__img" style="background-image: url('./img/news/3.jpg')"></div>
+                        <div class="news-text">
+                            <span class="news__date">23.04.2020</span>
+                            <p class="news__title subtitle">Watch classic UEFA competition games in full and for free Watch classic UEFA competition games in full and for free</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="clr hide-mobile"></div>
+                <div class="clr hide-desktop"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>
