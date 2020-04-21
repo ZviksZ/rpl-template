@@ -7,7 +7,7 @@ title: "КиберЛига Pro Series"
     <div class="container">
         <div class="breadcrumbs">
             <a href="/" class="item">Главная</a>
-            <span class="item-last">Статистика</span>
+            <span class="item-last">Рейтинг клубов</span>
         </div>
     </div>
 </section>
@@ -15,7 +15,7 @@ title: "КиберЛига Pro Series"
     <div class="container">
         <div class="row">
             <div class="col d-flex-results">
-                <h2 class="h2">Статистика</h2>
+                <h2 class="h2">Рейтинг клубов</h2>
 
 
                 <select class="select stats-select" data-table-sort  name="">
@@ -25,6 +25,7 @@ title: "КиберЛига Pro Series"
                         <option value="win">Побед</option>
                         <option value="draw">Ничьих</option>
                         <option value="loose">Поражений</option>
+                        <option value="rate">Рейтинг</option>
                     </optgroup>
                 </select>
 
@@ -33,66 +34,72 @@ title: "КиберЛига Pro Series"
         </div>
         <div class="row m-t-40">
             <div class="col" >
-                <table style="width: 100%; border-collapse: collapse; font-size: 16px;" class="stats__table table_sort">
+                <table style="width: 100%; border-collapse: collapse; font-size: 16px;" class="stats__table clubs-rate-table table_sort">
                     <thead>
                     <tr>
-                        <th class="player">Игрок</th>
                         <th class="club">Клуб</th>
                         <th class="plays">Игр</th>
                         <th class="win">В</th>
                         <th class="draw">Н</th>
                         <th class="loose">П</th>
                         <th class="goals">З-П</th>
-                        <th class="match">За матч</th>
-                        <th class="average">Ср. мячей</th>
+                        <th class="s1">#1</th>
+                        <th class="s2">#2</th>
+                        <th class="s3">#3</th>
+                        <th class="s4">#4</th>
+                        <th class="s5">#5</th>
+                        <th class="s6">#6</th>
+                        <th class="s7">#7</th>
+                        <th class="s8">#8</th>
+                        <th class="rate">Рейтинг</th>
                         <th class="btn"></th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr >
-                        <td class="player" data-href="/">
-                            <div class="flex-center">
-                                <img src="./img/users/1.png" alt="1">
-                                <span>Константин Константинопольский</span>
-                            </div>
-
-                        </td>
+                    <tr>
                         <td class="club" data-href="/">
                             <div class="flex-center">
                                 <img src="./img/clubs/krilya.svg" alt="1">
                                 <span>Крылья Советов</span>
                             </div>
-
                         </td>
                         <td class="plays">16</td>
                         <td class="win">16</td>
                         <td class="draw">1</td>
                         <td class="loose">14</td>
                         <td class="goals">67-16</td>
-                        <td class="match">6</td>
-                        <td class="average">7</td>
+                        <td class="s1">99</td>
+                        <td class="s2">9</td>
+                        <td class="s3">9</td>
+                        <td class="s4">99</td>
+                        <td class="s5">100</td>
+                        <td class="s6">98</td>
+                        <td class="s7">70</td>
+                        <td class="s8">38</td>
+                        <td class="rate">998</td>
                         <td class="btn"><a href="/" class="show-additional-stats">+</a></td>
                     </tr>
-                    <tr >
-                        <td class="player" data-href="/">
-                            <div class="flex-center">
-                                <img src="./img/users/2.png" alt="1">
-                                <span>Дмитрий Катыкин</span>
-                            </div>
-                        </td>
-                        <td class="club" data-href="/">
+                    <tr>
+                        <td class="club"  data-href="/">
                             <div class="flex-center">
                                 <img src="./img/clubs/tambov.svg" alt="1">
                                 <span>Тамбов</span>
                             </div>
                         </td>
-                        <td class="plays">17</td>
-                        <td class="win">17</td>
-                        <td class="draw">3</td>
-                        <td class="loose">11</td>
-                        <td class="goals">57-35</td>
-                        <td class="match">44</td>
-                        <td class="average">7</td>
+                        <td class="plays">16</td>
+                        <td class="win">16</td>
+                        <td class="draw">1</td>
+                        <td class="loose">14</td>
+                        <td class="goals">67-16</td>
+                        <td class="s1">101</td>
+                        <td class="s2">65</td>
+                        <td class="s3">87</td>
+                        <td class="s4">99</td>
+                        <td class="s5">100</td>
+                        <td class="s6">95</td>
+                        <td class="s7">70</td>
+                        <td class="s8">38</td>
+                        <td class="rate">997</td>
                         <td class="btn"><a href="/" class="show-additional-stats">+</a></td>
                     </tr>
                     </tbody>

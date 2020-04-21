@@ -28,6 +28,7 @@ $(function () {
    customSelectInit();
    initDataSelect();
    initStatsTableBtn();
+   initRateTableBtn();
    initTableSortMobile();
    $('[data-fancybox="gallery"]').fancybox({
       openSpeed: 10,
@@ -44,7 +45,7 @@ $(function () {
 });
 
 function initStatsTableBtn() {
-   $('.show-additional-stats').on('click', function (e) {
+   $('.stats__table:not(.clubs-rate-table) .show-additional-stats').on('click', function (e) {
       e.preventDefault();
 
       var row = $(this).closest('tr'),
@@ -83,7 +84,53 @@ function initStatsTableBtn() {
 
    })
 }
+function initRateTableBtn() {
+   $('.stats__table.clubs-rate-table .show-additional-stats').on('click', function (e) {
+      e.preventDefault();
 
+      var row = $(this).closest('tr'),
+         win = row.find('.win').text(),
+         draw = row.find('.draw').text(),
+         loose = row.find('.loose').text(),
+         s1 = row.find('.s1').text(),
+         s2 = row.find('.s2').text(),
+         s3 = row.find('.s3').text(),
+         s4 = row.find('.s4').text(),
+         s5 = row.find('.s5').text(),
+         s6 = row.find('.s6').text(),
+         s7 = row.find('.s7').text(),
+         s8 = row.find('.s8').text();
+
+      if ($(this).hasClass('open')) {
+         $(this).removeClass('open');
+         $(this).text('+');
+         row.next('tr').remove();
+      } else {
+         var newRow = ` <tr class="additional-row">
+               <td colspan="5">               
+                  <ul class="additional-list">
+                     <li><span>Побед</span><span>${win}</span></li>
+                     <li><span>Ничьих</span><span>${draw}</span></li>
+                     <li><span>Поражений</span><span>${loose}</span></li>
+                     <li><span>Очков в Серии #1</span><span>${s1}</span></li>
+                     <li><span>Очков в Серии #2</span><span>${s2}</span></li>
+                     <li><span>Очков в Серии #3</span><span>${s3}</span></li>
+                     <li><span>Очков в Серии #4</span><span>${s4}</span></li>
+                     <li><span>Очков в Серии #5</span><span>${s5}</span></li>
+                     <li><span>Очков в Серии #6</span><span>${s6}</span></li>
+                     <li><span>Очков в Серии #7</span><span>${s7}</span></li>
+                     <li><span>Очков в Серии #8</span><span>${s8}</span></li>
+                  </ul>
+               </td>
+            </tr> `;
+
+         $(newRow).insertAfter(row);
+
+         $(this).addClass('open');
+         $(this).text('-');
+      }
+   })
+}
 
 function initTableSortMobile() {
    if ($('[data-table-sort]').length) {
@@ -92,7 +139,7 @@ function initTableSortMobile() {
          var th = `.table_sort th.${thValue}`;
 
          $('.additional-row').remove();
-         $('.show-additional-stats').text('+');
+         $('.show-additional-stats').text('+').removeClass('open');
          $(th).trigger('click');
       })
    }
@@ -152,7 +199,7 @@ function customSelectInit() {
 }
 
 function initTableRowLink() {
-   var tr = $('tr[data-href]');
+   var tr = $('[data-href]');
 
    if (tr.length) {
       tr.on('click', function () {

@@ -46,6 +46,7 @@ body {
     padding: 1px 15px;
     max-width: 1370px;
     height: 100%;
+    position: relative;
     &.relative{
         position: relative;
         z-index: 2;
@@ -160,6 +161,8 @@ body {
 /*Breadcrumbs*/
 .breadcrumbs {
     display: flex;
+    position: relative;
+    z-index: 7;
     .item, .item-last {
         font-weight: normal;
         font-size: 14px;
@@ -180,6 +183,11 @@ body {
             &:hover {
                 text-decoration: underline;
             }
+        }
+    }
+    &.breadcrumbs-white {
+        .item, .item-last {
+            color: $colorWhite;
         }
     }
 }
@@ -209,6 +217,10 @@ th.sorted[data-order="1"],
 th.sorted[data-order="-1"] {
     position: relative;
 }
+th.sorted[data-order] {
+    background: rgba(0, 0, 0, 0.03) !important;
+}
+
 
 th.sorted[data-order="1"]::after,
 th.sorted[data-order="-1"]::after {

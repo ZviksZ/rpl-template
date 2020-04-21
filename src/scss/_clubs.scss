@@ -1,0 +1,168 @@
+.clubs {
+    .clubs-top {
+        min-height: 305px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        overflow: hidden;
+        .clubs-top__bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../img/clubs-bg.png) no-repeat 50% 15%;
+            -webkit-background-size: cover;
+            background-size: cover;
+            @media screen and (max-width: 1000px) and (min-width:760px){
+                background: url(../img/clubs-bg.png) no-repeat 50%;
+            }
+        }
+        .clubs-top__content {
+            position: relative;
+            text-align: center;
+            .clubs-logo {
+                width: 110px;
+                height: 110px;
+            }
+            .clubs-title {
+                margin: 10px 0 40px;
+                font-family: $fontSec;
+                font-weight: normal;
+                font-size: 50px;
+                line-height: 51px;
+                text-align: center;
+                color: #FFFFFF;
+                text-shadow: 0 3px 0 rgba(0, 0, 0, 0.5);
+            }
+            .clubs-top__socials {
+                a {
+                    display: inline-block;
+                    margin-right: 20px;
+                    cursor: pointer;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    img {
+                        width: 28px;
+                        height: 28px;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width:760px){
+            .clubs-top__content {
+                position: relative;
+                text-align: center;
+                margin-top: 10px;
+                .clubs-logo {
+                    width: 90px;
+                    height: 90px;
+                }
+                .clubs-title {
+                    font-size: 38px;
+                    line-height: 39px;
+                }
+                .clubs-top__socials {
+                    a {
+                        display: inline-block;
+                        margin-right: 12px;
+                        cursor: pointer;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                        img {
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .clubs-info {
+        .switches {
+            display: flex;
+            overflow-x: scroll;
+            justify-content: center;
+            .switch:not(:last-child) {
+                margin-right: 18px;
+            }
+            .switch {
+                white-space: nowrap;
+            }
+        }
+        .tab {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+        .clubs-info__stats {
+            .clubs-info__stats-item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 16px;
+                background: #FFFFFF;
+                margin-bottom: 19px;
+                height: 63px;
+                .text {
+                    font-weight: normal;
+                    font-size: 20px;
+                    line-height: 21px;
+                    color: $colorBlue;
+                }
+                .number {
+                    font-weight: bold;
+                    font-size: 26px;
+                    line-height: 27px;
+                    color: $colorMain;
+                }
+                &--blue, &--red {
+                    .text {
+                        color: $colorWhite;
+                    }
+                    .number {
+                        font-weight: bold;
+                        font-size: 38px;
+                        line-height: 40px;
+                        color: $colorWhite;
+                    }
+                }
+                &--blue  {
+                    background: #2581C4;
+                }
+                &--red {
+                    background: #E73338;
+                }
+                @include mobile {
+                    .text {
+                        font-size: 18px;
+                        line-height: 19px;
+                    }
+                    .number {
+                        font-size: 24px;
+                        line-height: 25px;
+                    }
+                    &--blue, &--red {
+                        .number {
+                            font-size: 34px;
+                            line-height: 35px;
+                        }
+                    }
+                }
+
+            }
+            .clubs-info__stats-title {
+                font-weight: bold;
+                font-size: 26px;
+                line-height: 27px;
+                color: #000000;
+                margin: 26px 0 20px;
+            }
+        }
+    }
+    .clubs-line-up {
+
+    }
+}

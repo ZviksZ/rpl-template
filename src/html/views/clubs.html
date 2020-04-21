@@ -1,0 +1,198 @@
+<% var data = {
+title: "КиберЛига Pro Series"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<section class="section gray p-b-0 p-t-0 clubs" >
+        <div class="krilya-bg">
+            <div class="container">
+                <div class="clubs-top">
+                    <div class="breadcrumbs breadcrumbs-white">
+                        <a href="/" class="item">Главная</a>
+                        <a href="/" class="item">Участники</a>
+                        <span class="item-last">Крылья Советов</span>
+                    </div>
+                    <div class="clubs-top__bg"></div>
+                    <div class="clubs-top__content">
+                        <img class="clubs-logo" src="./img/clubs/krilya.svg" alt="krilya">
+                        <h1 class="clubs-title">Крылья Советов</h1>
+                        <div class="clubs-top__socials">
+                            <a href="" target="_blank">
+                                <img src="./img/social/web.svg" alt="">
+                            </a>
+                            <a href="" target="_blank">
+                                <img src="./img/social/facebook.svg" alt="">
+                            </a>
+                            <a href="" target="_blank">
+                                <img src="./img/social/instagram.svg" alt="">
+                            </a>
+                            <a href="" target="_blank">
+                                <img src="./img/social/ok.svg" alt="">
+                            </a>
+                            <a href="" target="_blank">
+                                <img src="./img/social/twitter.svg" alt="">
+                            </a>
+                            <a href="" target="_blank">
+                                <img src="./img/social/vk.svg" alt="">
+                            </a>
+                            <a href="" target="_blank">
+                                <img src="./img/social/youtube.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clubs-info" data-tabs-block>
+            <div class="container">
+                <div class="row">
+                    <div class="col text-align-center m-t-40 m-b-40">
+                        <div class="switches">
+                            <div class="tab-big switch" data-tab="1">Статистика</div>
+                            <div class="tab-big switch" data-tab="2">Состав</div>
+                            <div class="tab-big switch" data-tab="3">Матчи</div>
+                            <div class="tab-big switch" data-tab="4">Новости</div>
+                        </div>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+
+                <div class="row tab" data-tab="1">
+                    <div class="col clubs-info__stats">
+                        <div class="row">
+                            <div class="col w-33 w-50-tablet">
+                                <div class="clubs-info__stats-item clubs-info__stats-item--blue">
+                                    <span class="text">Рейтинг</span>
+                                    <span class="number">80</span>
+                                </div>
+                            </div>
+                            <div class="col w-33 w-50-tablet">
+                                <div class="clubs-info__stats-item ">
+                                    <span class="text">Побед</span>
+                                    <span class="number">80</span>
+                                </div>
+                            </div>
+                            <div class="clr hide-desktop"></div>
+                            <div class="col w-33 w-50-tablet">
+                                <div class="clubs-info__stats-item ">
+                                    <span class="text">Забито</span>
+                                    <span class="number">20</span>
+                                </div>
+                            </div>
+                            <div class="clr hide-mobile"></div>
+                            <div class="col w-33 w-50-tablet">
+                                <div class="clubs-info__stats-item clubs-info__stats-item--red">
+                                    <span class="text">Позиция</span>
+                                    <span class="number">16</span>
+                                </div>
+                            </div>
+                            <div class="clr hide-desktop"></div>
+                            <div class="col w-33 w-50-tablet">
+                                <div class="clubs-info__stats-item ">
+                                    <span class="text">Ничьих</span>
+                                    <span class="number">5</span>
+                                </div>
+                            </div>
+                            <div class="col w-33 w-50-tablet">
+                                <div class="clubs-info__stats-item ">
+                                    <span class="text">Пропущено</span>
+                                    <span class="number">30</span>
+                                </div>
+                            </div>
+                            <div class="clr hide-mobile"></div>
+                            <div class="clr hide-desktop"></div>
+
+                            <div class="col w-33 w-50-tablet">
+                                <div class="clubs-info__stats-item ">
+                                    <span class="text">Матчей</span>
+                                    <span class="number">90</span>
+                                </div>
+                            </div>
+                            <div class="col w-33 w-50-tablet">
+                                <div class="clubs-info__stats-item ">
+                                    <span class="text">Поражений</span>
+                                    <span class="number">5</span>
+                                </div>
+                            </div>
+                            <div class="clr hide-desktop"></div>
+                            <div class="col w-33 w-50-tablet">
+                                <div class="clubs-info__stats-item ">
+                                    <span class="text">Разница мячей</span>
+                                    <span class="number">-10</span>
+                                </div>
+                            </div>
+                            <div class="clr hide-mobile"></div>
+                        </div>
+                    </div>
+
+                    <div class="col clubs-info__stats clubs-info__stats-series">
+                        <div class="clubs-info__stats-title">По сериям</div>
+                        <div class="row">
+                            <div class="col w-33 w-50-tablet">
+                                <div class="clubs-info__stats-item ">
+                                    <span class="text">Series 1</span>
+                                    <span class="number">10</span>
+                                </div>
+                            </div>
+                            <div class="col w-33 w-50-tablet">
+                                <div class="clubs-info__stats-item ">
+                                    <span class="text">Series 2</span>
+                                    <span class="number">5</span>
+                                </div>
+                            </div>
+                            <div class="clr hide-desktop"></div>
+                            <div class="col w-33 w-50-tablet">
+                                <div class="clubs-info__stats-item ">
+                                    <span class="text">Series 3</span>
+                                    <span class="number">10</span>
+                                </div>
+                            </div>
+                            <div class="clr hide-mobile"></div>
+                            <div class="col w-33 w-50-tablet">
+                                <div class="clubs-info__stats-item">
+                                    <span class="text">Series 4</span>
+                                    <span class="number">5</span>
+                                </div>
+                            </div>
+                            <div class="clr hide-desktop"></div>
+                            <div class="col w-33 w-50-tablet">
+                                <div class="clubs-info__stats-item ">
+                                    <span class="text">Series 5</span>
+                                    <span class="number">-</span>
+                                </div>
+                            </div>
+                            <div class="col w-33 w-50-tablet">
+                                <div class="clubs-info__stats-item ">
+                                    <span class="text">Series 6</span>
+                                    <span class="number">-</span>
+                                </div>
+                            </div>
+                            <div class="clr hide-mobile"></div>
+                            <div class="clr hide-desktop"></div>
+
+                            <div class="col w-33 w-50-tablet">
+                                <div class="clubs-info__stats-item ">
+                                    <span class="text">Series 7</span>
+                                    <span class="number">-</span>
+                                </div>
+                            </div>
+                            <div class="col w-33 w-50-tablet">
+                                <div class="clubs-info__stats-item ">
+                                    <span class="text">Series 8</span>
+                                    <span class="number">-</span>
+                                </div>
+                            </div>
+                            <div class="clr hide-desktop"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row tab" data-tab="2">2</div>
+                <div class="row tab" data-tab="3">3</div>
+                <div class="row tab" data-tab="4">4</div>
+            </div>
+
+        </div>
+
+</section>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>
