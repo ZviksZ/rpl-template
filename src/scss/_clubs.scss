@@ -1,4 +1,31 @@
 .clubs {
+    .krilya-bg {
+        background: #ffffff !important;
+    }
+    .select__clubs-wrapper {
+        position: absolute;
+        right: 0;
+        top: 40px;
+        &.tab.active {
+            display: inline-block !important;
+        }
+        .result-select, .choices {
+            @include mobile {
+                width: auto;
+                position: relative;
+            }
+            .choices__item {
+                text-align: left;
+            }
+        }
+        @include mobile {
+            position: relative;
+            right: auto;
+            top: auto;
+            float: left;
+            margin-bottom: 30px;
+        }
+    }
     .clubs-top {
         min-height: 305px;
         padding-top: 20px;
@@ -31,7 +58,7 @@
                 font-size: 50px;
                 line-height: 51px;
                 text-align: center;
-                color: #FFFFFF;
+                color: $colorBlue;
                 text-shadow: 0 3px 0 rgba(0, 0, 0, 0.5);
             }
             .clubs-top__socials {

@@ -53,6 +53,13 @@ title: "КиберЛига Pro Series"
                             <div class="tab-big switch" data-tab="3">Матчи</div>
                             <div class="tab-big switch" data-tab="4">Новости</div>
                         </div>
+                        <div class="select__clubs-wrapper tab" data-tab="3">
+                            <select class="select result-select" data-select-init  name="">
+                                <option value="1">Серия #1</option>
+                                <option value="2">Серия #2</option>
+                            </select>
+                        </div>
+
                     </div>
                     <div class="clr"></div>
                 </div>
@@ -217,8 +224,8 @@ title: "КиберЛига Pro Series"
                     </div>
                 </div>
                 <div class="row tab results playoff " data-tab="3">
-                    <div class="results__subtitle">Сегодня, 23 апреля. <span>Киберлига Pro Series #2</span></div>
-                    <table class="results__table">
+                    <div class="results__subtitle" data-select="1">Сегодня, 23 апреля. <span>Киберлига Pro Series #2</span></div>
+                    <table data-select="1" class="results__table">
                         <tbody>
                         <tr data-href="/news-detail.html" class="result-item" >
                             <td class="team__name">
@@ -394,10 +401,10 @@ title: "КиберЛига Pro Series"
                         </tbody>
                     </table>
 
-                    <div class="results__subtitle m-t-30">Сегодня, 24 апреля</div>
-                    <table class="results__table">
+                    <div class="results__subtitle" data-select="2">Сегодня, 24 апреля. <span>Киберлига Pro Series #2</span></div>
+                    <table data-select="2" class="results__table">
                         <tbody>
-                        <tr data-href="/news-detail.html" class="result-item " >
+                        <tr data-href="/news-detail.html" class="result-item" >
                             <td class="team__name">
                                 Краснодар
                             </td>
@@ -405,7 +412,7 @@ title: "КиберЛига Pro Series"
                                 <img src="./img/clubs/krasnodar.svg" alt="krasnodar">
                             </td>
                             <td  class="score text-align-center">
-                                0:3
+                                2:3
                                 <span class="score__text">Завершен</span>
                             </td>
                             <td  class="team__logo">
@@ -418,7 +425,7 @@ title: "КиберЛига Pro Series"
                                 </a>
                             </td>
                         </tr>
-                        <tr data-href="/news-detail.html" class="result-item ">
+                        <tr data-href="/news-detail.html" class="result-item">
                             <td class="team__name">
                                 Спартак
                             </td>
@@ -441,7 +448,7 @@ title: "КиберЛига Pro Series"
                             </td>
 
                         </tr>
-                        <tr data-href="/news-detail.html" class="result-item " >
+                        <tr data-href="/news-detail.html" class="result-item" >
                             <td class="team__name">
                                 Ростов
                             </td>
@@ -462,7 +469,7 @@ title: "КиберЛига Pro Series"
                                 </a>
                             </td>
                         </tr>
-                        <tr data-href="/news-detail.html" class="result-item " >
+                        <tr data-href="/news-detail.html" class="result-item">
                             <td class="team__name">
                                 1D
                             </td>
@@ -484,28 +491,28 @@ title: "КиберЛига Pro Series"
                             </td>
 
                         </tr>
-                        <tr data-href="/news-detail.html" class="result-item  ">
-                        <td class="team__name">
-                            Краснодар
-                        </td>
-                        <td  class="team__logo">
-                            <img src="./img/clubs/krasnodar.svg" alt="krasnodar">
-                        </td>
-                        <td  class="score text-align-center">
-                            3:3
-                            <span class="score__text">Завершен</span>
-                        </td>
-                        <td  class="team__logo">
-                            <img src="./img/clubs/spartak.svg" alt="spartak">
-                        </td>
-                        <td class="team__name last">
-                            Спартак
-                            <a href="/" class="play-btn play-btn__big">
-                                <img src="./img/play.svg" alt="play">
-                            </a>
-                        </td>
+                        <tr data-href="/news-detail.html" class="result-item">
+                            <td class="team__name">
+                                Краснодар
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/krasnodar.svg" alt="krasnodar">
+                            </td>
+                            <td  class="score text-align-center">
+                                3:3
+                                <span class="score__text">Завершен</span>
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/spartak.svg" alt="spartak">
+                            </td>
+                            <td class="team__name last">
+                                Спартак
+                                <a href="/" class="play-btn play-btn__big">
+                                    <img src="./img/play.svg" alt="play">
+                                </a>
+                            </td>
                         </tr>
-                        <tr data-href="/news-detail.html" class="result-item  " >
+                        <tr data-href="/news-detail.html" class="result-item" >
                             <td class="team__name">
                                 Спартак
                             </td>
@@ -526,7 +533,7 @@ title: "КиберЛига Pro Series"
                                 </a>
                             </td>
                         </tr>
-                        <tr data-href="/news-detail.html" class="result-item  " >
+                        <tr data-href="/news-detail.html" class="result-item" >
                             <td class="team__name">
                                 Краснодар
                             </td>
@@ -547,7 +554,7 @@ title: "КиберЛига Pro Series"
                                 </a>
                             </td>
                         </tr>
-                        <tr data-href="/news-detail.html" class="result-item  " >
+                        <tr data-href="/news-detail.html" class="result-item" >
                             <td class="team__name">
                                 Краснодар
                             </td>
@@ -570,6 +577,7 @@ title: "КиберЛига Pro Series"
                         </tr>
                         </tbody>
                     </table>
+
                 </div>
                 <div class="row tab news-block" data-tab="4">
                     <div class="col w-25 w-50-tablet">

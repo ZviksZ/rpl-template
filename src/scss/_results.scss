@@ -5,6 +5,9 @@
             display: flex;
             overflow-x: scroll;
             margin-top: 20px;
+            &::-webkit-scrollbar { width: 0; }
+            & { -ms-overflow-style: none; }
+            & { overflow: -moz-scrollbars-none; }
             .tab-small {
                 margin-right: 10px;
                 max-height: 43px;
@@ -45,6 +48,9 @@
         background: #FFFFFF;
         border-collapse: collapse;
         table-layout: fixed;
+        &.active-select {
+            display: table !important;
+        }
         .result-item {
             position: relative;
             background: #ffffff;
