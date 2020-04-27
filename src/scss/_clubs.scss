@@ -84,11 +84,17 @@
             display: flex;
             overflow-x: scroll;
             justify-content: center;
+            &::-webkit-scrollbar { width: 0; }
+            & { -ms-overflow-style: none; }
+            & { overflow: -moz-scrollbars-none; }
             .switch:not(:last-child) {
                 margin-right: 18px;
             }
             .switch {
                 white-space: nowrap;
+            }
+            @include mob {
+                justify-content: flex-start;
             }
         }
         .tab {
@@ -163,6 +169,168 @@
         }
     }
     .clubs-line-up {
+        .clubs-line-up__item {
+            width: 100%;
+            display: block;
+            margin-bottom: 35px;
+            transition: .3s linear;
+            .photo-block {
+                width: 100%;
+                background: #ffffff url("../img/player-bg.png") no-repeat;
+                -webkit-background-size: cover;
+                background-size: cover;
+                background-position: center center;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                overflow: hidden;
+                &:before{
+                    content: " ";
+                    display: block;
+                    float: left;
+                    margin: 0;
+                    padding-top: 115%;
+                }
+                .main-photo {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                }
+                .club-logo {
+                    position: absolute;
+                    right: 20px;
+                    top: 20px;
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            .text-block {
+                background: #021135;
+                padding: 15px 30px;
+                border-left: 9px solid $colorMain;
+                border-right: 9px solid $colorRed;
+                text-align: center;
+                .name {
+                    font-family: $fontSec;
+                    font-weight: normal;
+                    font-size: 54px;
+                    line-height: 55px;
+                    color: #FFFFFF;
+                    text-transform: uppercase;
+                    margin-bottom: 6px;
+                }
+                .surname {
+                    font-family: $fontSec;
+                    font-weight: normal;
+                    font-size: 30px;
+                    line-height: 31px;
+                    color: #FFFFFF;
+                    text-transform: uppercase;
+                }
+                .link {
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 17px;
+                    color: #00E0FF;
+                }
+                .line {
+                    width: 215px;
+                    height: 1px;
+                    background: rgba(255,255,255, 0.15);
+                    margin: 11px auto 13px;
+                }
+                @media screen and (max-width: 540px) {
+                    .name {
+                        font-size: 44px;
+                        line-height: 45px;
+                    }
+                    .surname {
+                        font-size: 26px;
+                        line-height: 27px;
+                    }
+                }
+            }
+            @include desktop {
+                &:hover {
+                    .photo-block {
+                        .main-photo {
+                            transform: scale(1.1);
+                        }
+                    }
 
+                }
+            }
+            @media screen and (max-width: 540px) {
+                .photo-block {
+                    .club-logo {
+                        position: absolute;
+                        right: 10px;
+                        top: 10px;
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+            }
+        }
+        .clubs-line-up__detail {
+            padding: 42px 72px;
+            background: #ffffff;
+            .item {
+                margin-bottom: 22px;
+            }
+            .subtitle {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 21px;
+                color: $colorBlue;
+                margin-bottom: 12px;
+                margin-right: 50px;
+            }
+            .value {
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 22px;
+                color: $colorMain;
+            }
+            .age .value,
+            .city .value {
+                font-size: 20px;
+                line-height: 21px;
+            }
+            .social {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            .social-list {
+                display: flex;
+                align-items: center;
+                margin-bottom: 12px;
+                a {
+                    display: block;
+                    margin-right: 12px;
+                    width: 16px;
+                    height: 16px;
+                    img {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+            .achievement {
+                .value {
+                    margin-bottom: 9px;
+                }
+            }
+            @include tab {
+                padding: 32px 20px;
+            }
+            @include mob {
+                padding: 32px 12px;
+            }
+        }
     }
 }

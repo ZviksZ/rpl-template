@@ -3,7 +3,7 @@ title: "КиберЛига Pro Series"
 }; %>
 <%= _.template(require('./../includes/header.html').default)(data) %>
 
-<section class="section gray p-b-0 p-t-0 clubs" >
+<section class="section gray p-b-30 p-t-0 clubs " >
         <div class="krilya-bg">
             <div class="container">
                 <div class="clubs-top">
@@ -186,9 +186,479 @@ title: "КиберЛига Pro Series"
                         </div>
                     </div>
                 </div>
-                <div class="row tab" data-tab="2">2</div>
-                <div class="row tab" data-tab="3">3</div>
-                <div class="row tab" data-tab="4">4</div>
+                <div class="row tab clubs-line-up" data-tab="2">
+                    <div class="col w-33 w-50-tablet">
+                        <a href="" class="clubs-line-up__item">
+                            <div class="photo-block">
+                                <img src="./img/players/big-2.png" alt="1" class="main-photo">
+                                <img src="./img/clubs/krilya.svg" alt="krilya" class="club-logo">
+                            </div>
+                            <div class="text-block">
+                                <div class="name">Давид</div>
+                                <div class="surname">Голетиани</div>
+                                <div class="line"></div>
+                                <div class="link">@pes_nickname</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col w-33 w-50-tablet">
+                        <a href="" class="clubs-line-up__item">
+                            <div class="photo-block">
+                                <img src="./img/players/big-1.png" alt="1" class="main-photo">
+                                <img src="./img/clubs/krilya.svg" alt="krilya" class="club-logo">
+                            </div>
+                            <div class="text-block">
+                                <div class="name">Виталий</div>
+                                <div class="surname">Сафонов</div>
+                                <div class="line"></div>
+                                <div class="link">@pes_nickname</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row tab results playoff " data-tab="3">
+                    <div class="results__subtitle">Сегодня, 23 апреля. <span>Киберлига Pro Series #2</span></div>
+                    <table class="results__table">
+                        <tbody>
+                        <tr data-href="/news-detail.html" class="result-item" >
+                            <td class="team__name">
+                                Краснодар
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/krasnodar.svg" alt="krasnodar">
+                            </td>
+                            <td  class="score text-align-center">
+                                0:3
+                                <span class="score__text">Завершен</span>
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/spartak.svg" alt="spartak">
+                            </td>
+                            <td class="team__name last">
+                                Спартак
+                                <a href="/" class="play-btn play-btn__big">
+                                    <img src="./img/play.svg" alt="play">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr data-href="/news-detail.html" class="result-item">
+                            <td class="team__name">
+                                Спартак
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/spartak.svg" alt="spartak">
+                            </td>
+                            <td  class="score time text-align-center">
+                                15:30
+                                <span class="score__text">Не начался</span>
+
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/tambov.svg" alt="tambov">
+                            </td>
+                            <td class="team__name last">
+                                Тамбов
+                                <a href="/" class="play-btn play-btn__big">
+                                    <img src="./img/play.svg" alt="play">
+                                </a>
+                            </td>
+
+                        </tr>
+                        <tr data-href="/news-detail.html" class="result-item" >
+                            <td class="team__name">
+                                Ростов
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/rostov.svg" alt="rostov">
+                            </td>
+                            <td  class="score text-align-center">
+                                1:3
+                                <span class="score__text">Завершен</span>
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/ufa.svg" alt="ufa">
+                            </td>
+                            <td class="team__name last">
+                                Уфа
+                                <a href="/" class="play-btn play-btn__big">
+                                    <img src="./img/play.svg" alt="play">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr data-href="/news-detail.html" class="result-item">
+                            <td class="team__name">
+                                1D
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/club-default.svg" alt="default">
+                            </td>
+                            <td  class="score time text-align-center">
+                                15:30
+                                <span class="score__text">Не начался</span>
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/club-default.svg" alt="default">
+                            </td>
+                            <td class="team__name last">
+                                2A
+                                <a href="/" class="play-btn play-btn__big">
+                                    <img src="./img/play.svg" alt="play">
+                                </a>
+                            </td>
+
+                        </tr>
+                        <tr data-href="/news-detail.html" class="result-item">
+                            <td class="team__name">
+                                Краснодар
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/krasnodar.svg" alt="krasnodar">
+                            </td>
+                            <td  class="score text-align-center">
+                                3:3
+                                <span class="score__text">Завершен</span>
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/spartak.svg" alt="spartak">
+                            </td>
+                            <td class="team__name last">
+                                Спартак
+                                <a href="/" class="play-btn play-btn__big">
+                                    <img src="./img/play.svg" alt="play">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr data-href="/news-detail.html" class="result-item" >
+                            <td class="team__name">
+                                Спартак
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/spartak.svg" alt="spartak">
+                            </td>
+                            <td  class="score time text-align-center">
+                                15:30
+                                <span class="score__text">Не начался</span>
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/tambov.svg" alt="tambov">
+                            </td>
+                            <td class="team__name last">
+                                Тамбов
+                                <a href="/" class="play-btn play-btn__big">
+                                    <img src="./img/play.svg" alt="play">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr data-href="/news-detail.html" class="result-item" >
+                            <td class="team__name">
+                                Краснодар
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/krasnodar.svg" alt="krasnodar">
+                            </td>
+                            <td  class="score text-align-center">
+                                2:3
+                                <span class="score__text">Завершен</span>
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/spartak.svg" alt="spartak">
+                            </td>
+                            <td class="team__name last">
+                                Спартак
+                                <a href="/" class="play-btn play-btn__big">
+                                    <img src="./img/play.svg" alt="play">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr data-href="/news-detail.html" class="result-item" >
+                            <td class="team__name">
+                                Краснодар
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/krasnodar.svg" alt="krasnodar">
+                            </td>
+                            <td  class="score text-align-center">
+                                2:3
+                                <span class="score__text">Завершен</span>
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/spartak.svg" alt="spartak">
+                            </td>
+                            <td class="team__name last">
+                                Спартак
+                                <a href="/" class="play-btn play-btn__big">
+                                    <img src="./img/play.svg" alt="play">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="results__subtitle m-t-30">Сегодня, 24 апреля</div>
+                    <table class="results__table">
+                        <tbody>
+                        <tr data-href="/news-detail.html" class="result-item " >
+                            <td class="team__name">
+                                Краснодар
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/krasnodar.svg" alt="krasnodar">
+                            </td>
+                            <td  class="score text-align-center">
+                                0:3
+                                <span class="score__text">Завершен</span>
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/spartak.svg" alt="spartak">
+                            </td>
+                            <td class="team__name last">
+                                Спартак
+                                <a href="/" class="play-btn play-btn__big">
+                                    <img src="./img/play.svg" alt="play">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr data-href="/news-detail.html" class="result-item ">
+                            <td class="team__name">
+                                Спартак
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/spartak.svg" alt="spartak">
+                            </td>
+                            <td  class="score time text-align-center">
+                                15:30
+                                <span class="score__text">Не начался</span>
+
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/tambov.svg" alt="tambov">
+                            </td>
+                            <td class="team__name last">
+                                Тамбов
+                                <a href="/" class="play-btn play-btn__big">
+                                    <img src="./img/play.svg" alt="play">
+                                </a>
+                            </td>
+
+                        </tr>
+                        <tr data-href="/news-detail.html" class="result-item " >
+                            <td class="team__name">
+                                Ростов
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/rostov.svg" alt="rostov">
+                            </td>
+                            <td  class="score text-align-center">
+                                1:3
+                                <span class="score__text">Завершен</span>
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/ufa.svg" alt="ufa">
+                            </td>
+                            <td class="team__name last">
+                                Уфа
+                                <a href="/" class="play-btn play-btn__big">
+                                    <img src="./img/play.svg" alt="play">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr data-href="/news-detail.html" class="result-item " >
+                            <td class="team__name">
+                                1D
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/club-default.svg" alt="default">
+                            </td>
+                            <td  class="score time text-align-center">
+                                15:30
+                                <span class="score__text">Не начался</span>
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/club-default.svg" alt="default">
+                            </td>
+                            <td class="team__name last">
+                                2A
+                                <a href="/" class="play-btn play-btn__big">
+                                    <img src="./img/play.svg" alt="play">
+                                </a>
+                            </td>
+
+                        </tr>
+                        <tr data-href="/news-detail.html" class="result-item  ">
+                        <td class="team__name">
+                            Краснодар
+                        </td>
+                        <td  class="team__logo">
+                            <img src="./img/clubs/krasnodar.svg" alt="krasnodar">
+                        </td>
+                        <td  class="score text-align-center">
+                            3:3
+                            <span class="score__text">Завершен</span>
+                        </td>
+                        <td  class="team__logo">
+                            <img src="./img/clubs/spartak.svg" alt="spartak">
+                        </td>
+                        <td class="team__name last">
+                            Спартак
+                            <a href="/" class="play-btn play-btn__big">
+                                <img src="./img/play.svg" alt="play">
+                            </a>
+                        </td>
+                        </tr>
+                        <tr data-href="/news-detail.html" class="result-item  " >
+                            <td class="team__name">
+                                Спартак
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/spartak.svg" alt="spartak">
+                            </td>
+                            <td  class="score time text-align-center">
+                                15:30
+                                <span class="score__text">Не начался</span>
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/tambov.svg" alt="tambov">
+                            </td>
+                            <td class="team__name last">
+                                Тамбов
+                                <a href="/" class="play-btn play-btn__big">
+                                    <img src="./img/play.svg" alt="play">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr data-href="/news-detail.html" class="result-item  " >
+                            <td class="team__name">
+                                Краснодар
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/krasnodar.svg" alt="krasnodar">
+                            </td>
+                            <td  class="score text-align-center">
+                                2:3
+                                <span class="score__text">Завершен</span>
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/spartak.svg" alt="spartak">
+                            </td>
+                            <td class="team__name last">
+                                Спартак
+                                <a href="/" class="play-btn play-btn__big">
+                                    <img src="./img/play.svg" alt="play">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr data-href="/news-detail.html" class="result-item  " >
+                            <td class="team__name">
+                                Краснодар
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/krasnodar.svg" alt="krasnodar">
+                            </td>
+                            <td  class="score text-align-center">
+                                2:3
+                                <span class="score__text">Завершен</span>
+                            </td>
+                            <td  class="team__logo">
+                                <img src="./img/clubs/spartak.svg" alt="spartak">
+                            </td>
+                            <td class="team__name last">
+                                Спартак
+                                <a href="/" class="play-btn play-btn__big">
+                                    <img src="./img/play.svg" alt="play">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row tab news-block" data-tab="4">
+                    <div class="col w-25 w-50-tablet">
+                        <a class="news-tab" href="/">
+                            <span class="news__type video">ВИДЕО</span>
+                            <div class="news__img" style="background-image: url('./img/news/2.jpg')"></div>
+                            <div class="news-text">
+                                <span class="news__date">23.04.2020</span>
+                                <p class="news__title subtitle">Watch classic UEFA competition games in full and for free</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col w-25 w-50-tablet">
+                        <a class="news-tab" href="/">
+                            <span class="news__type media">МЕДИА</span>
+                            <div class="news__img" style="background-image: url('./img/news/1.jpg')"></div>
+                            <div class="news-text">
+                                <span class="news__date">23.04.2020</span>
+                                <p class="news__title subtitle">Watch classic UEFA competition games in full and for free Watch classic UEFA competition games in full and for free for free</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="clr hide-desktop"></div>
+                    <div class="col w-25 w-50-tablet">
+                        <a class="news-tab" href="/">
+                            <span class="news__type new">НОВОСТЬ</span>
+                            <div class="news__img" style="background-image: url('./img/news/3.jpg')"></div>
+                            <div class="news-text">
+                                <span class="news__date">23.04.2020</span>
+                                <p class="news__title subtitle">Watch classic UEFA competition games in full and for free Watch classic UEFA competition games in full and for free</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col w-25 w-50-tablet">
+                        <a class="news-tab" href="/">
+                            <span class="news__type media">МЕДИА</span>
+                            <div class="news__img" style="background-image: url('./img/news/1.jpg')"></div>
+                            <div class="news-text">
+                                <span class="news__date">23.04.2020</span>
+                                <p class="news__title subtitle">Watch classic UEFA competition games in full and for free</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="clr hide-mobile"></div>
+                    <div class="clr hide-desktop"></div>
+                    <div class="col w-25 w-50-tablet">
+                        <a class="news-tab" href="/">
+                            <span class="news__type video">ВИДЕО</span>
+                            <div class="news__img" style="background-image: url('./img/news/2.jpg')"></div>
+                            <div class="news-text">
+                                <span class="news__date">23.04.2020</span>
+                                <p class="news__title subtitle">Watch classic UEFA competition games in full and for free</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col w-25 w-50-tablet">
+                        <a class="news-tab" href="/">
+                            <span class="news__type media">МЕДИА</span>
+                            <div class="news__img" style="background-image: url('./img/news/1.jpg')"></div>
+                            <div class="news-text">
+                                <span class="news__date">23.04.2020</span>
+                                <p class="news__title subtitle">Watch classic UEFA competition games in full and for free Watch classic UEFA competition games in full and for free for free</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="clr hide-desktop"></div>
+                    <div class="col w-25 w-50-tablet">
+                        <a class="news-tab" href="/">
+                            <span class="news__type new">НОВОСТЬ</span>
+                            <div class="news__img" style="background-image: url('./img/news/3.jpg')"></div>
+                            <div class="news-text">
+                                <span class="news__date">23.04.2020</span>
+                                <p class="news__title subtitle">Watch classic UEFA competition games in full and for free Watch classic UEFA competition games in full and for free</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col w-25 w-50-tablet">
+                        <a class="news-tab" href="/">
+                            <span class="news__type media">МЕДИА</span>
+                            <div class="news__img" style="background-image: url('./img/news/1.jpg')"></div>
+                            <div class="news-text">
+                                <span class="news__date">23.04.2020</span>
+                                <p class="news__title subtitle">Watch classic UEFA competition games in full and for free</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="clr hide-mobile"></div>
+                    <div class="clr hide-desktop"></div>
+                </div>
             </div>
 
         </div>

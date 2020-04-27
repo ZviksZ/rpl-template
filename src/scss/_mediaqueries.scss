@@ -32,6 +32,18 @@ $desktop-small: 1200px;
         @content;
     }
 };
+@mixin tab  {
+    @media (max-width: #{$desktop}) and (min-width: #{$tablet})
+    {
+        @content;
+    }
+};
+@mixin mob  {
+    @media (max-width: #{$tablet})
+    {
+        @content;
+    }
+};
 @mixin mobile-small  {
     @media (max-width: #{$mobileSmall})
     {

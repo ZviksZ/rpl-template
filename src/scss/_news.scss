@@ -46,7 +46,7 @@
             -webkit-background-size: cover;
             background-size: cover;
             background-repeat: no-repeat;
-            background-position: center center;
+            background-position: 50% 0;
             overflow: hidden;
             transition: 0.4s linear;
             &:before{
@@ -151,7 +151,7 @@
             -webkit-background-size: cover;
             background-size: cover;
             background-repeat: no-repeat;
-            background-position: center center;
+            background-position: 50% 0;
             overflow: hidden;
             transition: 0.4s linear;
         }

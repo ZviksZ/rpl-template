@@ -32,7 +32,6 @@
             }
             td {
                 padding: 7px 0;
-                cursor: pointer;
             }
             &:first-child {
                 border-left: 7px solid $colorMain;
@@ -129,12 +128,16 @@
                 }
             }
             td {
-                padding: 3px 0;
-                cursor: pointer;
+                padding: 11px 0;
             }
             &:first-child {
                 border-left: 7px solid $colorRed;
                 background: #F1F1F1;
+            }
+            &:last-child {
+                td {
+                    padding-bottom: 10px;
+                }
             }
             .scorers__table-numb {
                 font-weight: 700;
@@ -150,8 +153,9 @@
                 img  {
                     display: inline-block;
                     margin-top: 3px;
-                    width: 100%;
-                    height: auto;
+                    width: 50px;
+                    height: 50px;
+                    object-fit: contain;
                 }
             }
             .scorers__table-data {
@@ -211,6 +215,7 @@
                     img  {
                         width: 46px;
                         height: 46px;
+                        object-fit: contain;
                     }
                 }
                 .scorers__table-data {
@@ -254,6 +259,7 @@
                     img  {
                         width: 46px;
                         height: 46px;
+                        object-fit: contain;
                     }
                 }
                 .scorers__table-data {

@@ -1,0 +1,87 @@
+<% var data = {
+title: "КиберЛига Pro Series"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<section class="section gray p-t-0 clubs">
+    <div class="clubs-info" data-tabs-block>
+        <div class="container">
+            <div class="breadcrumbs m-t-30 m-b-30">
+                <a class="item" href="/">Главная</a>
+                <a class="item" href="/">Участники</a>
+                <a class="item" href="/">Крылья Советов</a>
+                <span class="item-last">Давид Голетиани</span>
+            </div>
+            <div class="row clubs-line-up" >
+                <div class="col w-33 w-50-tablet">
+                    <a class="clubs-line-up__item" href="">
+                        <div class="photo-block">
+                            <img alt="1" class="main-photo" src="./img/players/big-2.png">
+                            <img alt="krilya" class="club-logo" src="./img/clubs/krilya.svg">
+                        </div>
+                        <div class="text-block">
+                            <div class="name">Давид</div>
+                            <div class="surname">Голетиани</div>
+                            <div class="line"></div>
+                            <div class="link">@pes_nickname</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col w-66 w-50-tablet">
+                    <div class="clubs-line-up__detail">
+                        <p class="h4 m-b-25">Информация</p>
+                        <div class="item age">
+                            <span class="subtitle">Возраст</span>
+                            <span class="value">23</span>
+                        </div>
+                        <div class="item city">
+                            <span class="subtitle">Город</span>
+                            <span class="value">Санкт-Петербург</span>
+                        </div>
+                        <div class="item social">
+                            <span class="subtitle">Соцсети</span>
+                            <div class="social-list">
+                                <a href="" target="_blank">
+                                    <img src="./img/social/web.svg" alt="">
+                                </a>
+                                <a href="" target="_blank">
+                                    <img src="./img/social/facebook.svg" alt="">
+                                </a>
+                                <a href="" target="_blank">
+                                    <img src="./img/social/instagram.svg" alt="">
+                                </a>
+                                <a href="" target="_blank">
+                                    <img src="./img/social/ok.svg" alt="">
+                                </a>
+                                <a href="" target="_blank">
+                                    <img src="./img/social/twitter.svg" alt="">
+                                </a>
+                                <a href="" target="_blank">
+                                    <img src="./img/social/vk.svg" alt="">
+                                </a>
+                                <a href="" target="_blank">
+                                    <img src="./img/social/youtube.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item about">
+                            <p class="subtitle">О себе</p>
+                            <span class="value">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec vestibulum odio. Proin vel nisi dui. Mauris non nulla ut risus aliquet molestie vel quis nulla. Ut scelerisque est a diam dictum, ac varius velit fringilla.</span>
+                        </div>
+                        <div class="item achievement">
+                            <p class="subtitle">Достижения</p>
+                            <p class="value">Турнир от Чемпионат.com (PS4) 2016 – 1 место</p>
+                            <p class="value">Турнир FIFA16 (PS4) 2016 – участник</p>
+                            <p class="value">Турнир от Чемпионат.com (PS4) 2016 – 1 место</p>
+                            <p class="value">Турнир FIFA16 (PS4) 2016 – участник</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

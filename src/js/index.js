@@ -30,6 +30,7 @@ $(function () {
    initStatsTableBtn();
    initRateTableBtn();
    initTableSortMobile();
+   initTableTooltip();
    $('[data-fancybox="gallery"]').fancybox({
       openSpeed: 10,
       openEffect: 'none',
@@ -262,6 +263,7 @@ function initMoreNewsBtn() {
 /* Инициализация дополнительных табов(внутри табов) */
 function initAdditionalTabs(tabsClassKey, sectionClass) {
    const tabs = document.getElementsByClassName(tabsClassKey);
+   const sec = document.getElementsByClassName(sectionClass);
    const sectionClassName = '.' + sectionClass;
 
    [...tabs].forEach(tab => tab.addEventListener('click', tabClick));
@@ -269,13 +271,16 @@ function initAdditionalTabs(tabsClassKey, sectionClass) {
    function tabClick(event) {
       const tabId = event.target.dataset.id;
 
-      $(sectionClassName).removeClass('active');
+      //$(sectionClassName).removeClass('active');
+      [...sec].forEach((tab, i) => {
+         tab.classList.remove('active');
+      });
 
       [...tabs].forEach((tab, i) => {
          tab.classList.remove('active');
-      })
-      const activeTabs = document.querySelectorAll(`.${tabsClassKey}[data-id='${tabId}']`)
+      });
 
+      const activeTabs = document.querySelectorAll(`.${tabsClassKey}[data-id='${tabId}']`)
       activeTabs.forEach((tab, i) => {
          tab.classList.add('active');
       })
@@ -296,4 +301,50 @@ function gallerySliderInit() {
       arrows: true,
       fade: true
    });
+}
+
+
+function initTableTooltip() {
+   if ($(document).width() >= 1000 && $('[data-tooltip]').length)  {
+      let tooltipElem;
+
+      document.onmouseover = function(e) {
+         let target = e.target;
+
+         // если у нас есть подсказка...
+         let tooltipHtml = target.dataset.tooltip;
+         if (!tooltipHtml) return;
+
+         // ...создадим элемент для подсказки
+
+         tooltipElem = document.createElement('div');
+         tooltipElem.className = 'tooltip';
+         tooltipElem.innerHTML = tooltipHtml;
+         document.body.append(tooltipElem);
+
+         // спозиционируем его сверху от аннотируемого элемента (top-center)
+         let coords = target.getBoundingClientRect();
+
+         let left = coords.left + (target.offsetWidth - tooltipElem.offsetWidth) / 2;
+         if (left < 0) left = 0; // не заезжать за левый край окна
+
+         let top = coords.top - tooltipElem.offsetHeight + 55;
+         if (top < 0) { // если подсказка не помещается сверху, то отображать её снизу
+            top = coords.top + target.offsetHeight + 5;
+         }
+
+         tooltipElem.style.left = left + 'px';
+         tooltipElem.style.top = top + 'px';
+      };
+
+      document.onmouseout = function(e) {
+
+         if (tooltipElem) {
+            tooltipElem.remove();
+            tooltipElem = null;
+         }
+
+      };
+   }
+
 }
