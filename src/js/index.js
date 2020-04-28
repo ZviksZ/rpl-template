@@ -46,24 +46,28 @@ $(function () {
 });
 
 function initStatsTableBtn() {
-   $('.stats__table:not(.clubs-rate-table) .show-additional-stats').on('click', function (e) {
-      e.preventDefault();
+   if ($('.show-additional-stats').length) {
+      $('.show-additional-stats').text('').append(`<span>+</span>`)
 
-      var row = $(this).closest('tr'),
-         win = row.find('.win').text(),
-         draw = row.find('.draw').text(),
-         loose = row.find('.loose').text(),
-         match = row.find('.match').text(),
-         average = row.find('.average').text();
+      $('.stats__table:not(.clubs-rate-table) .show-additional-stats').on('click', function (e) {
+         e.preventDefault();
+
+         var row = $(this).closest('tr'),
+            win = row.find('.win').text(),
+            draw = row.find('.draw').text(),
+            loose = row.find('.loose').text(),
+            match = row.find('.match').text(),
+            average = row.find('.average').text();
 
 
 
-      if ($(this).hasClass('open')) {
-         $(this).removeClass('open');
-         $(this).text('+');
-         row.next('tr').remove();
-      } else {
-         var newRow = ` <tr class="additional-row">
+         if ($(this).hasClass('open')) {
+            $(this).removeClass('open');
+            //$(this).text('+');
+            $(this).find('span').text('+');
+            row.next('tr').remove();
+         } else {
+            var newRow = ` <tr class="additional-row">
                <td colspan="5">               
                   <ul class="additional-list">
                      <li><span>Побед</span><span>${win}</span></li>
@@ -75,15 +79,18 @@ function initStatsTableBtn() {
                </td>
             </tr> `;
 
-         $(newRow).insertAfter(row);
+            $(newRow).insertAfter(row);
 
-         $(this).addClass('open');
-         $(this).text('-');
-      }
+            $(this).addClass('open');
+            //$(this).text('-');
+            $(this).find('span').text('-');
+         }
 
 
 
-   })
+      })
+   }
+
 }
 function initRateTableBtn() {
    $('.stats__table.clubs-rate-table .show-additional-stats').on('click', function (e) {
@@ -174,8 +181,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function initDataSelect() {
    var select = $('.select[data-select-init]');
    if (select.length) {
-
-      $('[data-select="1"]').addClass('active-select');
+      var selector = `[data-select="${select.val()}"]`
+      $(selector).addClass('active-select');
    }
 
    select.on('change', function () {
@@ -193,7 +200,8 @@ function customSelectInit() {
       const element = document.querySelector('select.select');
       new Choices(element, {
          searchEnabled: false,
-         itemSelectText: ''
+         itemSelectText: '',
+         shouldSort: false
       });
    }
 

@@ -1,0 +1,138 @@
+.playoff-section {
+    @include mobile{
+        .row .col.w-50-mobile{
+            margin-bottom: 0;
+        }
+        .row .col.w-25-mobile, .row .col.w-33-mobile{
+            margin-bottom: 10px;
+        }
+    }
+    &.tab {
+        display: none !important;
+    }
+    &.tab.active {
+        display: block !important;
+    }
+    &__line {
+        width: 100%;
+        text-align: center;
+        padding-top: 25px;
+        &.bg-gray {
+            background: #F8F8F8;
+        }
+    }
+    &__subtitle {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 15px;
+        text-align: center;
+        color: #2581C4;
+        margin-bottom: 16px;
+    }
+    .playoff-match {
+        margin: 0 auto 14px;
+        border-collapse: collapse;
+        tr {
+            vertical-align: baseline;
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+        td:nth-child(1), td:nth-child(3){
+            width: 90px;
+            img {
+                width: 44px;
+                height: 44px;
+                @include mob {
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+            span {
+                display: inline-block;
+                width: 100%;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 13px;
+                text-align: center;
+                color: #000000;
+            }
+            span.short {
+                display: none;
+            }
+            @include mobile {
+                span.short {
+                    display: inline-block !important;
+                }
+                span:not(.short) {
+                    display: none;
+                }
+            }
+
+        }
+        td:nth-child(2){
+            width: 105px;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 25px;
+            text-align: center;
+            letter-spacing: 0.07em;
+            color: #000000;
+            padding: 0 28px;
+            @include mobile {
+                width: 85px;
+                font-size: 19px;
+                line-height: 20px;
+                padding: 0 20px;
+            }
+            @include mob {
+                width: 65px;
+                font-size: 15px;
+                line-height: 16px;
+                padding: 0 10px;
+            }
+        }
+        @include mob {
+            margin-bottom: 0;
+            tr {
+                &:nth-child(1) {
+                    td:nth-child(2) {
+                        display: none;
+                    }
+                }
+                &:nth-child(2) {
+                    display: table-row;
+                    td {
+                        width: 105px;
+                        font-weight: bold;
+                        font-size: 19px;
+                        line-height: 20px;
+                        text-align: center;
+                        letter-spacing: 0.07em;
+                        color: #000000;
+                        padding: 5px 0 0 0;
+                    }
+                }
+            }
+        }
+    }
+    .underline {
+        position: relative;
+        width: 50%;
+        height: 10px;
+        margin: 0 auto 17px;
+        border-bottom: 2px solid #D0D0D0;
+        border-right: 2px solid #D0D0D0;
+        border-left: 2px solid #D0D0D0;
+        &:after {
+            position: absolute;
+            left: calc(50% - 1px);
+            bottom: -10px;
+            display: block;
+            height: 10px;
+            width: 2px;
+            content: '';
+            background: #D0D0D0;
+        }
+    }
+}

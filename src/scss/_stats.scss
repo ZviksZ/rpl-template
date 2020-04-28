@@ -139,16 +139,27 @@
             padding-right: 8px;
         }
         .show-additional-stats {
-            display: block;
+            /*display: block;*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 18px;
             height: 18px;
-            line-height: 1;
-            font-size: 18px;
+            /*line-height: 18px;
+            font-size: 16px;*/
             text-align: center;
             color: $colorWhite;
             background: $colorRed;
             border: 0;
             border-radius: 50%;
+            span {
+                color: $colorWhite;
+                display: inline-block;
+                height: 1px;
+                line-height: 1px;
+                width: 100%;
+                text-align: center;
+            }
         }
 
         @include mobile {

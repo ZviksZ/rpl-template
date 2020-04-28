@@ -1,0 +1,562 @@
+<% var data = {
+title: "КиберЛига Pro Series"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<section class="section  p-b-0">
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/" class="item">Главная</a>
+            <span class="item-last">Турнирные таблицы</span>
+        </div>
+    </div>
+</section>
+<section class="section  playoff results results-page tabs-block" data-tabs-block>
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex-results">
+                <h2 class="h2">Турнирные таблицы</h2>
+
+
+                <!--Добавился select - выбор серии -->
+                <select class="select result-select" data-select-init  name="">
+                    <option value="1" selected>Серия #1</option>
+                    <option value="2">Серия #2</option>
+                </select>
+            </div>
+            <div class="clr hide-mobile"></div>
+        </div>
+
+        <!--каждый row для каждой серии(новый select) - добавляем data-select - класс active автоматически проставится для первого -->
+        <div class="row" data-select="1">
+            <div class="col m-b-30" >
+                <div class="switches">
+                    <div class="tab-big switch" data-tab="1">Групповой этап</div>
+                    <div class="tab-big switch" data-tab="2">Плей-офф</div>
+                </div>
+            </div>
+            <div class="clr hide-mobile"></div>
+            <div class="col tab" data-tab="1">
+                <div class="row">
+                    <div class="col w-50 m-b-40">
+                        <div class="group-table__wrapper">
+                            <div class="results__title results__title-big mb5">Группа А</div>
+                            <table class="group-table group-table-2">
+                                <thead>
+                                <tr>
+                                    <th colspan="2" >Команда</th>
+                                    <th>И</th>
+                                    <th>В</th>
+                                    <th>Н</th>
+                                    <th>П</th>
+                                    <th>З-П</th>
+                                    <th class="black">О</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="">
+                                    <td>
+                                        <img src="./img/clubs/cska.svg" alt="cska">
+                                    </td>
+                                    <td class="text-align-left black">ЦСКА</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">20-50</td>
+                                    <td class="black">18</td>
+                                </tr>
+                                <tr class="" >
+                                    <td>
+                                        <img src="./img/clubs/sochi.svg" alt="cska">
+                                    </td>
+                                    <td class="text-align-left black">Сочи</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">20-50</td>
+                                    <td class="black">18</td>
+                                </tr>
+                                <tr class="" >
+                                    <td>
+                                        <img src="./img/clubs/krilya.svg" alt="cska">
+                                    </td>
+                                    <td class="text-align-left black">Крылья Советов</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">20-50</td>
+                                    <td class="black">18</td>
+                                </tr>
+                                <tr class="">
+                                    <td>
+                                        <img src="./img/clubs/rubin.svg" alt="cska">
+                                    </td>
+                                    <td class="text-align-left black">Рубин</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">20-50</td>
+                                    <td class="black">18</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col w-50 m-b-40">
+                        <div class="group-table__wrapper">
+                            <div class="results__title results__title-big mb5">Группа B</div>
+                            <table class="group-table group-table-2">
+                                <thead>
+                                <tr>
+                                    <th colspan="2">Команда</th>
+                                    <th>И</th>
+                                    <th>В</th>
+                                    <th>Н</th>
+                                    <th>П</th>
+                                    <th>З-П</th>
+                                    <th class="black">О</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="">
+                                    <td>
+                                        <img src="./img/clubs/cska.svg" alt="cska">
+                                    </td>
+                                    <td class="text-align-left black">ЦСКА</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">20-50</td>
+                                    <td class="black">18</td>
+                                </tr>
+                                <tr class="" >
+                                    <td>
+                                        <img src="./img/clubs/sochi.svg" alt="cska">
+                                    </td>
+                                    <td class="text-align-left black">Сочи</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">20-50</td>
+                                    <td class="black">18</td>
+                                </tr>
+                                <tr class="" >
+                                    <td>
+                                        <img src="./img/clubs/krilya.svg" alt="cska">
+                                    </td>
+                                    <td class="text-align-left black">Крылья Советов</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">20-50</td>
+                                    <td class="black">18</td>
+                                </tr>
+                                <tr class="">
+                                    <td>
+                                        <img src="./img/clubs/rubin.svg" alt="cska">
+                                    </td>
+                                    <td class="text-align-left black">Рубин</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">20-50</td>
+                                    <td class="black">18</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="clr hide-mobile"></div>
+                    <div class="col w-50 m-b-40">
+                        <div class="group-table__wrapper">
+                            <div class="results__title results__title-big mb5">Группа C</div>
+                            <table class="group-table group-table-2">
+                                <thead>
+                                <tr>
+                                    <th colspan="2">Команда</th>
+                                    <th>И</th>
+                                    <th>В</th>
+                                    <th>Н</th>
+                                    <th>П</th>
+                                    <th>З-П</th>
+                                    <th class="black">О</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="">
+                                    <td>
+                                        <img src="./img/clubs/cska.svg" alt="cska">
+                                    </td>
+                                    <td class="text-align-left black">ЦСКА</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">20-50</td>
+                                    <td class="black">18</td>
+                                </tr>
+                                <tr class="" >
+                                    <td>
+                                        <img src="./img/clubs/sochi.svg" alt="cska">
+                                    </td>
+                                    <td class="text-align-left black">Сочи</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">20-50</td>
+                                    <td class="black">18</td>
+                                </tr>
+                                <tr class="" >
+                                    <td>
+                                        <img src="./img/clubs/krilya.svg" alt="cska">
+                                    </td>
+                                    <td class="text-align-left black">Крылья Советов</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">20-50</td>
+                                    <td class="black">18</td>
+                                </tr>
+                                <tr class="">
+                                    <td>
+                                        <img src="./img/clubs/rubin.svg" alt="cska">
+                                    </td>
+                                    <td class="text-align-left black">Рубин</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">20-50</td>
+                                    <td class="black">18</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col w-50 m-b-40">
+                        <div class="group-table__wrapper">
+                            <div class="results__title results__title-big mb5">Группа D</div>
+                            <table class="group-table group-table-2">
+                                <thead>
+                                <tr>
+                                    <th colspan="2">Команда</th>
+                                    <th>И</th>
+                                    <th>В</th>
+                                    <th>Н</th>
+                                    <th>П</th>
+                                    <th>З-П</th>
+                                    <th class="black">О</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="">
+                                    <td>
+                                        <img src="./img/clubs/cska.svg" alt="cska">
+                                    </td>
+                                    <td class="text-align-left black">ЦСКА</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">20-50</td>
+                                    <td class="black">18</td>
+                                </tr>
+                                <tr class="" >
+                                    <td>
+                                        <img src="./img/clubs/sochi.svg" alt="cska">
+                                    </td>
+                                    <td class="text-align-left black">Сочи</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">20-50</td>
+                                    <td class="black">18</td>
+                                </tr>
+                                <tr class="" >
+                                    <td>
+                                        <img src="./img/clubs/krilya.svg" alt="cska">
+                                    </td>
+                                    <td class="text-align-left black">Крылья Советов</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">20-50</td>
+                                    <td class="black">18</td>
+                                </tr>
+                                <tr class="">
+                                    <td>
+                                        <img src="./img/clubs/rubin.svg" alt="cska">
+                                    </td>
+                                    <td class="text-align-left black">Рубин</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">6</td>
+                                    <td class="">20-50</td>
+                                    <td class="black">18</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col tab" data-tab="2">
+
+            </div>
+            <div class="clr hide-mobile"></div>
+        </div>
+    </div>
+    <div class="playoff-section tab" data-tab="2">
+        <div class="playoff-section__line bg-gray">
+            <div class="container">
+                <div class="playoff-section__subtitle">Четвертьфинал</div>
+                <div class="row">
+                    <div class="col w-25 w-25-mobile w-25-tablet">
+                        <table class="playoff-match">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <img src="./img/clubs/dinamo.svg" alt="">
+                                    <span>Динамо</span>
+                                    <span class="short">Дин</span>
+                                </td>
+                                <td>
+                                    2:0
+                                </td>
+                                <td>
+                                    <img src="./img/clubs/krilya.svg" alt="">
+                                    <span>Крылья Советов</span>
+                                    <span class="short">КС</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">2:0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col w-25 w-25-mobile w-25-tablet">
+                        <table class="playoff-match">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <img src="./img/clubs/dinamo.svg" alt="">
+                                    <span>Динамо</span>
+                                    <span class="short">Дин</span>
+                                </td>
+                                <td>
+                                    2:0
+                                </td>
+                                <td>
+                                    <img src="./img/clubs/krilya.svg" alt="">
+                                    <span>Крылья Советов</span>
+                                    <span class="short">КС</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">2:0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col w-25 w-25-mobile w-25-tablet">
+                        <table class="playoff-match">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <img src="./img/clubs/dinamo.svg" alt="">
+                                    <span>Динамо</span>
+                                    <span class="short">Дин</span>
+                                </td>
+                                <td>
+                                    2:0
+                                </td>
+                                <td>
+                                    <img src="./img/clubs/krilya.svg" alt="">
+                                    <span>Крылья Советов</span>
+                                    <span class="short">КС</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">2:0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col w-25 w-25-mobile w-25-tablet">
+                        <table class="playoff-match">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <img src="./img/clubs/dinamo.svg" alt="">
+                                    <span>Динамо</span>
+                                    <span class="short">Дин</span>
+                                </td>
+                                <td>
+                                    2:0
+                                </td>
+                                <td>
+                                    <img src="./img/clubs/krilya.svg" alt="">
+                                    <span>Крылья Советов</span>
+                                    <span class="short">КС</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">2:0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col w-50 w-50-mobile w-50-tablet">
+                        <div class="underline"></div>
+                    </div>
+                    <div class="col w-50 w-50-mobile w-50-tablet">
+                        <div class="underline"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="playoff-section__line">
+            <div class="container">
+                <div class="playoff-section__subtitle">Полуфинал</div>
+                <div class="row">
+                    <div class="col w-50 w-50-mobile w-50-tablet">
+                        <table class="playoff-match">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <img src="./img/clubs/dinamo.svg" alt="">
+                                    <span>Динамо</span>
+                                    <span class="short">Дин</span>
+                                </td>
+                                <td>
+                                    2:0
+                                </td>
+                                <td>
+                                    <img src="./img/clubs/krilya.svg" alt="">
+                                    <span>Крылья Советов</span>
+                                    <span class="short">КС</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">2:0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col w-50 w-50-mobile w-50-tablet">
+                        <table class="playoff-match">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <img src="./img/clubs/dinamo.svg" alt="">
+                                    <span>Динамо</span>
+                                    <span class="short">Дин</span>
+                                </td>
+                                <td>
+                                    2:0
+                                </td>
+                                <td>
+                                    <img src="./img/clubs/krilya.svg" alt="">
+                                    <span>Крылья Советов</span>
+                                    <span class="short">КС</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">2:0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="underline"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="playoff-section__line bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col w-33 w-33-mobile w-33-tablet">
+                        <div class="playoff-section__subtitle">За 3 место</div>
+                    </div>
+                    <div class="col w-33 w-33-mobile w-33-tablet">
+                        <div class="playoff-section__subtitle">Финал</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col w-33 w-33-mobile w-33-tablet">
+                        <table class="playoff-match">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <img src="./img/clubs/dinamo.svg" alt="">
+                                    <span>Динамо</span>
+                                    <span class="short">Дин</span>
+                                </td>
+                                <td>
+                                    2:0
+                                </td>
+                                <td>
+                                    <img src="./img/clubs/krilya.svg" alt="">
+                                    <span>Крылья Советов</span>
+                                    <span class="short">КС</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">2:0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col w-33 w-33-mobile w-33-tablet">
+                        <table class="playoff-match">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <img src="./img/clubs/dinamo.svg" alt="">
+                                    <span>Динамо</span>
+                                    <span class="short">Дин</span>
+                                </td>
+                                <td>
+                                    2:0
+                                </td>
+                                <td>
+                                    <img src="./img/clubs/krilya.svg" alt="">
+                                    <span>Крылья Советов</span>
+                                    <span class="short">КС</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">2:0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>
