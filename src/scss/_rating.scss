@@ -117,6 +117,9 @@
     .scorers__table {
         width: 100%;
         border-collapse: collapse;
+        &.active {
+            display: table !important;
+        }
         tr {
             border-left: 7px solid $colorWhite;
             border-bottom: 1px solid #F1F1F1;

@@ -34,3 +34,8 @@
         margin-right: 24px;
     }
 }
+
+
+.tab-big.switch.active ~ .choices {
+    display: none;
+}

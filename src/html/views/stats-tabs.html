@@ -1,0 +1,291 @@
+<% var data = {
+title: "КиберЛига Pro Series"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<section class="section p-b-0">
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/" class="item">Главная</a>
+            <span class="item-last">Статистика</span>
+        </div>
+    </div>
+</section>
+<section class="section stats rating tabs-block"  data-tabs-block>
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex-results">
+                <h2 class="h2">Статистика</h2>
+
+
+                <div class="switches m-t-20">
+                    <div class="tab-big switch" data-tab="1">Участники</div>
+                    <div class="tab-big switch" data-tab="2">Виртуальные бомбардиры</div>
+                </div>
+
+                <div class="stats-select__wrapper tab" data-tab="1">
+                    <select class="select stats-select"  data-table-sort  name="">
+                        <optgroup label="Сортировать:">
+                            <option value="plays">Количество игр</option>
+                            <option value="goals">Забитых-пропущенных</option>
+                            <option value="win">Побед</option>
+                            <option value="draw">Ничьих</option>
+                            <option value="loose">Поражений</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+
+            </div>
+            <div class="clr hide-mobile"></div>
+        </div>
+        <div class="row m-t-40">
+            <div class="col " >
+                <table style="width: 100%; border-collapse: collapse; font-size: 16px;" class="stats__table table_sort tab" data-tab="1">
+                    <thead>
+                    <tr>
+                        <th data-tooltip="Имя и фамилия игрока" class="player">Игрок</th>
+                        <th data-tooltip="Название клуба" class="club">Клуб</th>
+                        <th data-tooltip="Сыграно игр" class="plays">Игр</th>
+                        <th data-tooltip="Выиграно" class="win">В</th>
+                        <th data-tooltip="Ничьи" class="draw">Н</th>
+                        <th data-tooltip="Проигранно" class="loose">П</th>
+                        <th data-tooltip="Забито-пропущено голов" class="goals">З-П</th>
+                        <th data-tooltip="Среднее количество голов игрока в матче" class="match">За матч</th>
+                        <th data-tooltip="Среднее количество мячей в матчах с участием этого игрока" class="average">Ср. мячей</th>
+                        <th class="btn"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr >
+                        <td class="player" data-href="/">
+                            <div class="flex-center">
+                                <img src="./img/users/1.png" alt="1">
+                                <span>Константин Константинопольский</span>
+                            </div>
+
+                        </td>
+                        <td class="club" data-href="/">
+                            <div class="flex-center">
+                                <img src="./img/clubs/krilya.svg" alt="1">
+                                <span>Крылья Советов</span>
+                            </div>
+
+                        </td>
+                        <td class="plays">16</td>
+                        <td class="win">16</td>
+                        <td class="draw">1</td>
+                        <td class="loose">14</td>
+                        <td class="goals">67-16</td>
+                        <td class="match">6</td>
+                        <td class="average">7</td>
+                        <td class="btn"><a href="/" class="show-additional-stats">
+                            <span>+</span>
+                        </a></td>
+                    </tr>
+                    <tr >
+                        <td class="player" data-href="/">
+                            <div class="flex-center">
+                                <img src="./img/users/2.png" alt="1">
+                                <span>Дмитрий Катыкин</span>
+                            </div>
+                        </td>
+                        <td class="club" data-href="/">
+                            <div class="flex-center">
+                                <img src="./img/clubs/tambov.svg" alt="1">
+                                <span>Тамбов</span>
+                            </div>
+                        </td>
+                        <td class="plays">17</td>
+                        <td class="win">17</td>
+                        <td class="draw">3</td>
+                        <td class="loose">11</td>
+                        <td class="goals">57-35</td>
+                        <td class="match">44</td>
+                        <td class="average">7</td>
+                        <td class="btn"><a href="/" class="show-additional-stats">+</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="col w-50">
+                <table class="scorers__table tab"  data-tab="2">
+                    <tbody>
+                    <tr data-href="/news-detail.html">
+                        <td class="scorers__table-numb">1</td>
+                        <td class="scorers__table-photo">
+                            <img src="./img/players/1.png" alt="1">
+                        </td>
+                        <td class="scorers__table-data">
+                            <div class="name">
+                                Александр Соболев
+                            </div>
+                            <div class="team">
+                                <img src="./img/clubs/spartak.svg" alt="">
+                                <span>Спартак</span>
+                            </div>
+                        </td>
+                        <td class="scorers__table-ball">
+                            <img src="./img/ball.svg" alt="ball">
+                        </td>
+                        <td class="scorers__table-goals">
+                            12
+                        </td>
+                    </tr>
+                    <tr data-href="/news-detail.html">
+                        <td class="scorers__table-numb">2</td>
+                        <td class="scorers__table-photo">
+                            <img src="./img/players/1.jpg" alt="2">
+                        </td>
+                        <td class="scorers__table-data">
+                            <div class="name">
+                                Рифат Жемалетдинов
+                            </div>
+                            <div class="team">
+                                <img src="./img/clubs/loko.svg" alt="">
+                                <span>Локомотив</span>
+                            </div>
+                        </td>
+                        <td class="scorers__table-ball">
+                            <img src="./img/ball.svg" alt="ball">
+                        </td>
+                        <td class="scorers__table-goals">
+                            11
+                        </td>
+                    </tr>
+                    <tr data-href="/news-detail.html">
+                        <td class="scorers__table-numb">3</td>
+                        <td class="scorers__table-photo">
+                            <img src="./img/players/3.png" alt="3">
+                        </td>
+                        <td class="scorers__table-data">
+                            <div class="name">
+                                Евгений Луценко
+                            </div>
+                            <div class="team">
+                                <img src="./img/clubs/cska.svg" alt="cska">
+                                <span>ЦСКА</span>
+                            </div>
+                        </td>
+                        <td class="scorers__table-ball">
+                            <img src="./img/ball.svg" alt="ball">
+                        </td>
+                        <td class="scorers__table-goals">
+                            10
+                        </td>
+                    </tr>
+                    <tr data-href="/news-detail.html">
+                        <td class="scorers__table-numb">4</td>
+                        <td class="scorers__table-photo">
+                            <img src="./img/players/4.png" alt="4">
+                        </td>
+                        <td class="scorers__table-data">
+                            <div class="name">
+                                Гжегож Крыховяк
+                            </div>
+                            <div class="team">
+                                <img src="./img/clubs/loko.svg" alt="loko">
+                                <span>Локомотив</span>
+                            </div>
+                        </td>
+                        <td class="scorers__table-ball">
+                            <img src="./img/ball.svg" alt="ball">
+                        </td>
+                        <td class="scorers__table-goals">
+                            9
+                        </td>
+                    </tr>
+                    <tr data-href="/news-detail.html">
+                        <td class="scorers__table-numb">5</td>
+                        <td class="scorers__table-photo">
+                            <img src="./img/players/5.png" alt="5">
+                        </td>
+                        <td class="scorers__table-data">
+                            <div class="name">
+                                Джордже Деспотович
+                            </div>
+                            <div class="team">
+                                <img src="./img/clubs/cska.svg" alt="cska">
+                                <span>ЦСКА</span>
+                            </div>
+                        </td>
+                        <td class="scorers__table-ball">
+                            <img src="./img/ball.svg" alt="ball">
+                        </td>
+                        <td class="scorers__table-goals">
+                            8
+                        </td>
+                    </tr>
+                    <tr data-href="/news-detail.html">
+                        <td class="scorers__table-numb">6</td>
+                        <td class="scorers__table-photo">
+                            <img src="./img/players/3.png" alt="3">
+                        </td>
+                        <td class="scorers__table-data">
+                            <div class="name">
+                                Азмун Сердар
+                            </div>
+                            <div class="team">
+                                <img src="./img/clubs/zenit.svg" alt="zenit">
+                                <span>Зенит</span>
+                            </div>
+                        </td>
+                        <td class="scorers__table-ball">
+                            <img src="./img/ball.svg" alt="ball">
+                        </td>
+                        <td class="scorers__table-goals">
+                            7
+                        </td>
+                    </tr>
+                    <tr data-href="/news-detail.html">
+                        <td class="scorers__table-numb">7</td>
+                        <td class="scorers__table-photo">
+                            <img src="./img/players/7.png" alt="7">
+                        </td>
+                        <td class="scorers__table-data">
+                            <div class="name">
+                                Артем Дзюба
+                            </div>
+                            <div class="team">
+                                <img src="./img/clubs/zenit.svg" alt="zenit">
+                                <span>Зенит</span>
+                            </div>
+                        </td>
+                        <td class="scorers__table-ball">
+                            <img src="./img/ball.svg" alt="ball">
+                        </td>
+                        <td class="scorers__table-goals">
+                            7
+                        </td>
+                    </tr>
+                    <tr data-href="/news-detail.html">
+                        <td class="scorers__table-numb">8</td>
+                        <td class="scorers__table-photo">
+                            <img src="./img/players/1.png" alt="1">
+                        </td>
+                        <td class="scorers__table-data">
+                            <div class="name">
+                                Александр Соболев
+                            </div>
+                            <div class="team">
+                                <img src="./img/clubs/spartak.svg" alt="spartak">
+                                <span>Спартак</span>
+                            </div>
+                        </td>
+                        <td class="scorers__table-ball">
+                            <img src="./img/ball.svg" alt="ball">
+                        </td>
+                        <td class="scorers__table-goals">
+                            6
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="clr hide-mobile"></div>
+        </div>
+    </div>
+</section>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>
