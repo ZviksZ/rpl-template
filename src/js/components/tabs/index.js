@@ -2,11 +2,36 @@ import * as $ from 'jquery';
 
 function initTabs($tabs) {
    if (!$tabs) return;
-
    let defaultTab = $tabs.attr('data-default-tab');
-   if (!defaultTab) {
-      defaultTab = $tabs.find('[data-tab]').first().attr('data-tab');
+
+   if ( $tabs.find('[data-tab]').closest('[data-select]').length) {
+      if ($tabs.find('[data-tab]').closest('[data-select]').hasClass('active-select')) {
+         if (!defaultTab) {
+            if ($tabs.find('.active-select [data-tab]').hasClass('active')) {
+               defaultTab = $tabs.find('.active-select .active[data-tab]').attr('data-tab');
+            } else {
+               defaultTab = $tabs.find('.active-select [data-tab]').first().attr('data-tab');
+            }
+         }
+      }
+   } else {
+      if (!defaultTab) {
+         if ($tabs.find('[data-tab]').hasClass('active')) {
+            defaultTab = $tabs.find('.active[data-tab]').attr('data-tab');
+         } else {
+            defaultTab = $tabs.find('[data-tab]').first().attr('data-tab');
+         }
+      }
    }
+
+
+   /*if (!defaultTab) {
+      if ($tabs.find('[data-tab]').hasClass('active')) {
+         defaultTab = $tabs.find('.active[data-tab]').attr('data-tab');
+      } else {
+         defaultTab = $tabs.find('[data-tab]').first().attr('data-tab');
+      }
+   }*/
 
    changeTab(defaultTab);
 

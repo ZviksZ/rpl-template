@@ -11,11 +11,7 @@ import {initTabs} from './components/tabs'
 
 $(function () {
 
-   if ($('[data-tabs-block]').length) {
-      $(this).each(function () {
-         initTabs($(this));
-      })
-   }
+
 
    toggleMainMenu();
    initMoreNewsBtn();
@@ -43,6 +39,11 @@ $(function () {
          "close"
       ],
    });
+   if ($('[data-tabs-block]').length) {
+      $(this).each(function () {
+         initTabs($(this));
+      })
+   }
 });
 
 function initStatsTableBtn() {
@@ -191,6 +192,7 @@ function initDataSelect() {
       $('[data-select]').removeClass('active-select');
 
       $(selector).addClass('active-select');
+
    })
 }
 
@@ -272,7 +274,27 @@ function initMoreNewsBtn() {
 function initAdditionalTabs(tabsClassKey, sectionClass) {
    const tabs = document.getElementsByClassName(tabsClassKey);
    const sec = document.getElementsByClassName(sectionClass);
-   const sectionClassName = '.' + sectionClass;
+
+   if ($('[data-select]').length) {
+      $('[data-select]').each(function () {
+         let data;
+         if ($(this).find(`.${tabsClassKey}`).hasClass('active')) {
+            data = $(this).find(`.active.${tabsClassKey}`).attr('data-id')
+         } else {
+            data = $(this).find(`.${tabsClassKey}`).first().attr('data-id')
+         }
+
+        const activeTabs = $(this).find(`.${tabsClassKey}[data-id='${data}']`)
+         activeTabs.map((i,tab) => {
+            tab.classList.add('active');
+         })
+         const section = $(this).find(`.${sectionClass}[data-id='${data}']`)
+         section.map((i,tab) => {
+            tab.classList.add('active');
+         })
+      })
+   }
+
 
    [...tabs].forEach(tab => tab.addEventListener('click', tabClick));
 
