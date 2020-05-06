@@ -20,7 +20,7 @@ $(function () {
    initAdditionalTabs('tab-add-2', 'tab-3');
 
    gallerySliderInit();
-
+   initTranslationPage();
    initTableRowLink();
    customSelectInit();
    initDataSelect();
@@ -46,6 +46,19 @@ $(function () {
       })
    }
 });
+
+function initTranslationPage() {
+   var container = $('#translation-container');
+
+   var items = $('.video-block .video-item');
+
+
+   items.on('click', function () {
+      var dataSrc = $(this).attr('data-src');
+
+      container.find('iframe').attr('src', dataSrc)
+   })
+}
 
 function initStatsTableBtn() {
    if ($('.show-additional-stats').length) {

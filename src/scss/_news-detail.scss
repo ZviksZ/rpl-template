@@ -3,6 +3,9 @@
     width: 100%;
     background: $colorWhite;
     padding: 50px 230px;
+    &.news-detail-big {
+        padding: 50px 90px 88px;
+    }
     a {
         text-decoration: underline;
         color: $colorMain;
@@ -42,8 +45,14 @@
     }
     @include mobile {
         padding: 30px 120px;
+        &.news-detail-big {
+            padding: 30px 70px 55px;
+        }
     }
     @media screen and (max-width: 760px){
         padding: 15px;
+        &.news-detail-big {
+            padding: 15px;
+        }
     }
 }
