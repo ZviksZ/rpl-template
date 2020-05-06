@@ -292,5 +292,114 @@
                 }
             }
         }
+        &.scorers__table-big {
+            .scorers__table-goals {
+                width: 45px;
+                padding-right: 0;
+                padding-left: 4px;
+            }
+            .scorers__table-numb {
+                padding-left: 10px;
+            }
+            .scorers__table-data {
+                padding-top: 11px;
+                padding-left: 5px;
+
+                .team {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding-right: 20px;
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+                    span {
+                        display: inline-block;
+                        margin-left: 0;
+                        font-size: 15px;
+                        line-height: 16px;
+                        color: #021135;
+                        opacity: 1;
+                    }
+                }
+            }
+            td:nth-child(3) {
+                width: 165px;
+            }
+            td:nth-child(4) {
+                padding-left: 2px;
+            }
+            @media screen and (min-width: 1200px) {
+                td:nth-child(3) {
+                    width: auto;
+                }
+                td:nth-child(4) {
+                    padding-left: 5px;
+                }
+            }
+            @include mobile {
+                td:nth-child(3) {
+                    width: auto;
+                }
+                .scorers__table-photo {
+                    width: 35px;
+                    img {
+                        width: 35px;
+                        height: 35px;
+                    }
+                }
+            }
+            @include mob {
+                .team {
+                    flex-wrap: wrap;
+                    justify-content: center !important;
+                    img {
+                        width: 20px !important;
+                        height: 20px !important;
+                    }
+                    span {
+                        display: inline-block;
+                        width: 100%;
+                        font-size: 12px !important;
+                        line-height: 13px !important;
+                        text-align: center;
+                    }
+                }
+                .scorers__table-data {
+                    .name {
+                        font-size: 12px;
+                        line-height: 13px;
+                        margin-right: 5px;
+                        margin-left: 5px;
+                    }
+                }
+                .scorers__table-photo {
+                    width: 50px;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+                .scorers__table-numb {
+                    font-size: 14px;
+                    padding-left: 5px;
+                }
+                tr:first-child {
+                    border-left: 3px solid #e73338;
+                }
+
+                tr {
+                    border-left: 3px solid #fff;
+                }
+                .scorers__table-ball {
+                    width: 50px;
+                    img {
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
+            }
+        }
     }
 }

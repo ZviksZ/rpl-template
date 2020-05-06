@@ -15,6 +15,7 @@ $(function () {
 
    toggleMainMenu();
    initMoreNewsBtn();
+   initMoreVideosBtn();
    initAdditionalTabs('tab-add', 'tab-2');
    initAdditionalTabs('tab-add-2', 'tab-3');
 
@@ -264,6 +265,46 @@ function initMoreNewsBtn() {
          var newsNewHideItems = document.querySelectorAll('.news-block .news-hide');
          if (!newsNewHideItems.length) {
             $('#show-more__btn').hide();
+         }
+      }, 0)
+
+   })
+}
+/* Инициализация кнопки "Показать еще" для видео */
+function initMoreVideosBtn() {
+   var btn = $('#show-more__video');
+
+   if (!document.querySelectorAll('.video-block .video-hide').length) {
+      btn.hide()
+   }
+   btn.on('click', function (e) {
+      e.preventDefault();
+      var newsHideItems = document.querySelectorAll('.video-block .video-hide');
+
+      if (!newsHideItems.length) {
+         $(this).hide();
+      }
+
+      newsHideItems.forEach(function (item, index) {
+         if ($(document).width() >= 1000) {
+            if (index >= 0 && index <= 2) {
+               item.classList.remove('video-hide')
+            }
+         } else if ($(document).width() < 1000 && $(document).width() > 760) {
+            if (index >= 0 && index <= 1) {
+               item.classList.remove('video-hide')
+            }
+         } else {
+            if (index === 0) {
+               item.classList.remove('video-hide')
+            }
+         }
+      })
+
+      setTimeout(function () {
+         var newsNewHideItems = document.querySelectorAll('.video-block .video-hide');
+         if (!newsNewHideItems.length) {
+            $('#show-more__video').hide();
          }
       }, 0)
 

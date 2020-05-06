@@ -1,0 +1,70 @@
+<% var data = {
+title: "КиберЛига Pro Series"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+
+<section class="section gray">
+    <div class="container">
+        <div class="news-detail">
+            <div class="news__date">23.04.2020</div>
+            <h1 class="h2 m-t-20 m-b-30">Трансляция</h1>
+            <div class="video-container" >
+                <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/ZA4CjiCV4cw"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section p-t-0 gray">
+    <div class="container">
+        <div class="video-block">
+            <div class="h2 text-align-center m-b-30">Прошедшие трансляции</div>
+            <div class="row">
+                <div class="col w-33 w-50-tablet video-item">
+                    <div class="video-container" >
+                        <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/ZA4CjiCV4cw"></iframe>
+                    </div>
+                </div>
+                <div class="col w-33 w-50-tablet video-item">
+                    <div class="video-container" >
+                        <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/ZA4CjiCV4cw"></iframe>
+                    </div>
+                </div>
+                <div class="clr hide-desktop"></div>
+                <div class="col w-33 w-50-tablet video-item">
+                    <div class="video-container" >
+                        <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/ZA4CjiCV4cw"></iframe>
+                    </div>
+                </div>
+                <div class="clr hide-mobile"></div>
+                <div class="col w-33 w-50-tablet video-item video-hide">
+                    <div class="video-container" >
+                        <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/ZA4CjiCV4cw"></iframe>
+                    </div>
+                </div>
+                <div class="clr hide-desktop"></div>
+                <div class="col w-33 w-50-tablet video-item video-hide">
+                    <div class="video-container" >
+                        <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/ZA4CjiCV4cw"></iframe>
+                    </div>
+                </div>
+
+                <div class="col w-33 w-50-tablet video-item video-hide">
+                    <div class="video-container" >
+                        <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/ZA4CjiCV4cw"></iframe>
+                    </div>
+                </div>
+                <div class="clr hide-mobile"></div>
+                <div class="clr hide-desktop"></div>
+            </div>
+        </div>
+        <div class="text-align-center btn-block">
+            <a id="show-more__video" class="button" href="/">Показать еще</a>
+        </div>
+    </div>
+</section>
+
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>
