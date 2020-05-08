@@ -286,6 +286,10 @@ tr:not([data-href]) {
     .video-item {
         margin-bottom: 20px;
         cursor: pointer;
+        .video-item__title {
+            font-size: 20px;
+            margin: 5px 0;
+        }
         .video-item__bg {
             display: inline-block;
             width: 100%;

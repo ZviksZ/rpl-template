@@ -420,6 +420,15 @@
                     line-height: 13px;
                     opacity: 0.4;
                     letter-spacing: 0;
+                    margin-bottom: -3px;
+                    &.score__text-after {
+                        color: $colorBlue;
+                        font-size: 14px;
+                        opacity: 1;
+                        @include mob {
+                            font-size: 12px;
+                        }
+                    }
                 }
             }
 

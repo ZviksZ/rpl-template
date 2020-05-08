@@ -16,17 +16,23 @@
 
 
 
-.tab-2 {
+.results__table.tab-2 {
     display: none;
 }
-.tab-2.active {
+.results__table.tab-2.active {
     display: table;
 }
-.tab-3 {
+.results__item.tab-2.active {
+    display: table-row;
+}
+.results__table.tab-3 {
     display: none;
 }
-.tab-3.active {
+.results__table.tab-3.active {
     display: table;
+}
+.results__item.tab-3.active {
+    display: table-row;
 }
 
 .additional-tabs {
